@@ -2,13 +2,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilo do Header */
 header {
-  background-color: #f4f4f4;
   padding: 10px 0;
+  background-color: #2c2b2b;
+}
+
+header a {
+  color: #FFF!important;
+}
+
+body {
+  background-color: #333;
 }
 
 .container-header {
@@ -23,6 +31,7 @@ header {
 .logo img {
   max-width: 150px;
   height: auto;
+  filter: brightness(0) invert(1);
 }
 
 .search-bar input {
@@ -30,6 +39,7 @@ header {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #333;
 }
 
 .nav-links a {
@@ -47,20 +57,37 @@ header {
 /* Estilo do conteúdo */
 main {
   padding: 20px;
+  background-color: #333;
+  color: #FFF;
 }
 
 section h1 {
   font-size: 2em;
-  color: #333;
+}
+
+.home {
+  padding: 0 200px;
+}
+
+.home h1 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+
+.home p {
+  font-size: 2rem;
+}
+
+.filtro {
+  font-style: italic;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  justify-content: end;
+  display: flex;
 }
 
 /*mais*/
-/* Reset de estilo básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Container geral para o perfil e os posts */
 .card-container {
@@ -69,6 +96,43 @@ section h1 {
   gap: 20px; /* Espaço entre o perfil e o post */
   max-width: 800px;
   margin: 20px auto;
+  color: #FFF;
+}
+
+.card {
+  border-bottom: 1px solid #FFF;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.post-header img {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.post-text h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.post-text p {
+  margin: 5px
 }
 
 /* Estilo da div "meu-perfil" */
@@ -76,24 +140,24 @@ section h1 {
   display: flex;
   align-items: center;
   gap: 20px; /* Espaço entre a imagem e o nome */
+  
 }
 
 .meu-perfil img {
-  width: 80px; /* Tamanho da imagem de perfil */
-  height: 80px; /* Tamanho fixo para a imagem */
+  width: 60px; /* 80px Tamanho da imagem de perfil */
+  height: 60px; /* 80px Tamanho fixo para a imagem */
   border-radius: 50%; /* Deixa a imagem circular */
   object-fit: cover; /* A imagem preenche o quadrado sem distorcer */
 }
 
 .perfil-info h1 {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 .perfil-info p {
-  font-size: 1.1em;
-  color: #777;
+  font-size: 1em;
 }
 
 /* Estilo da div "post" */
@@ -117,7 +181,13 @@ section h1 {
 
 .post .data span {
   font-weight: bold;
-  color: #007bff;
+}
+
+span {
+  background-color: gray;
+  color: #FFF;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .post h1 {
@@ -128,5 +198,4 @@ section h1 {
 .post p {
   font-size: 1em;
   line-height: 1.6;
-  color: #333;
 }
