@@ -18,7 +18,7 @@
 
       <!-- Barra de pesquisa no centro -->
       <div class="search-bar">
-        <input type="text" placeholder="Pesquisar...">
+        <input type="text" id="search-input" placeholder="Pesquisar...">
       </div>
 
       <!-- Links de navegação à direita -->
@@ -33,10 +33,82 @@
   <!-- Conteúdo do Blog (exemplo) -->
   <main>
     <section>
-      <h1>Blog PrimerDev</h1>
-      <p>Aqui você encontra artigos, vídeos e muito mais!</p>
+      <div class="home">
+        <h1>Blog PrimerDev</h1>
+        <p>Aprenda mais sobre desenvolvimento web, cloud computing, programação, <br>
+        tecnologias e carreira. Aqui falamos de java, Angular, AWS e muito mais.</p>
+      </div>
+      <div class="filtro">
+        Filtros: Todos os posts
+      </div>
+    </section>
+
+    <!-- Posts -->
+    <section>
+      <div class="card-container" id="posts-container">
+        
+        <!-- Post 1 -->
+        <div class="card">
+          <div class="meu-perfil">
+            <img src="image/download.jpg" alt="Foto de perfil">
+            <div class="perfil-info">
+              <h1>Jeferson Primer</h1>
+              <p>Engenheiro de Software</p>
+            </div>
+          </div>
+          <div class="post">
+            <img src="image/post1.jpg" alt="Imagem do Post">
+            <p class="data">
+              17 de ago. de 2024 <span>javascript</span>
+            </p>
+            <h1>Texto do Post 1</h1>
+            <p>Um resumo do post: Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ipsum, quibusdam odit aut id eius quisquam accusamus sunt corrupti ab cum asperiores fuga sequi saepe odio blanditiis perspiciatis mollitia dignissimos.</p>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="card">
+          <div class="meu-perfil">
+            <img src="image/download.jpg" alt="Foto de perfil">
+            <div class="perfil-info">
+              <h1>Jeferson Primer</h1>
+              <p>Engenheiro de Software</p>
+            </div>
+          </div>
+          <div class="post">
+            <img src="image/post2.jpg" alt="Imagem do Post">
+            <p class="data">
+              18 de ago. de 2024 <span>angular</span>
+            </p>
+            <h1>Texto do Post 2</h1>
+            <p>Outro resumo do post: Aliquam erat volutpat. Praesent euismod dolor vitae dui volutpat, sit amet ultricies nisl ullamcorper.</p>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="card">
+          <div class="meu-perfil">
+            <img src="image/download.jpg" alt="Foto de perfil">
+            <div class="perfil-info">
+              <h1>Jeferson Primer</h1>
+              <p>Engenheiro de Software</p>
+            </div>
+          </div>
+          <div class="post">
+            <img src="image/post3.jpg" alt="Imagem do Post">
+            <p class="data">
+              19 de ago. de 2024 <span>aws</span>
+            </p>
+            <h1>Texto do Post 3</h1>
+            <p>Resumo do post 3: Suspendisse potenti. Morbi eget risus id sapien interdum hendrerit non eu nisl.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
+
+  <script src="scripts.js"></script>
 
 </body>
 </html>

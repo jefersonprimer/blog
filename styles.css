@@ -53,3 +53,80 @@ section h1 {
   font-size: 2em;
   color: #333;
 }
+
+/*mais*/
+/* Reset de estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container geral para o perfil e os posts */
+.card-container {
+  display: flex;
+  flex-direction: column; /* Deixa os elementos na vertical */
+  gap: 20px; /* Espaço entre o perfil e o post */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Estilo da div "meu-perfil" */
+.meu-perfil {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaço entre a imagem e o nome */
+}
+
+.meu-perfil img {
+  width: 80px; /* Tamanho da imagem de perfil */
+  height: 80px; /* Tamanho fixo para a imagem */
+  border-radius: 50%; /* Deixa a imagem circular */
+  object-fit: cover; /* A imagem preenche o quadrado sem distorcer */
+}
+
+.perfil-info h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.perfil-info p {
+  font-size: 1.1em;
+  color: #777;
+}
+
+/* Estilo da div "post" */
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os itens do post */
+}
+
+.post img {
+  width: 100%; /* A imagem do post ocupa toda a largura */
+  max-height: 400px; /* Limita a altura da imagem */
+  object-fit: cover; /* A imagem preenche o espaço sem distorcer */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+.post .data {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.post .data span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.post h1 {
+  font-size: 1.8em;
+  margin-top: 10px;
+}
+
+.post p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
