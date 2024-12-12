@@ -243,7 +243,8 @@ header {
 /* Estrutura do post container */
 
 a {
-  text-decoration: none;
+  color: inherit; /* Herda a cor do elemento pai */
+  text-decoration: none; /* Remove o sublinhado padrão */
 }
 
 .card {
