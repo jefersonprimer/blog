@@ -165,6 +165,15 @@ a {
   gap: 20px; /* Espaço entre a imagem e o texto */
 }
 
+.card {
+  margin-bottom: 10px;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
 .post-header {
   display: flex;
   flex-direction: row; /* Alinha a imagem e o texto na horizontal */
