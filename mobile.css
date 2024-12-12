@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+  /* Modifica o layout do card-container para coluna */
+  .card-container {
+    flex-direction: column; /* Empilha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  /* Faz os cards ocuparem 100% da largura da tela */
+  .card {
+    width: 100%; /* Card ocupa 100% da largura */
+    margin-bottom: 20px; /* Espaço entre os cards */
+  }
+
+  /* Modifica o layout do post-header */
+  .post-header {
+    flex-direction: column; /* Coloca a imagem em cima e o texto abaixo */
+    align-items: center; /* Centraliza o conteúdo dentro do card */
+  }
+
+  .post-header img {
+    width: 100%; /* A imagem vai ocupar toda a largura disponível */
+    max-width: 100%; /* Garante que a imagem ocupe toda a largura */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  }
+
+  .post-text {
+    width: 100%; /* O texto vai ocupar toda a largura disponível */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  /* Estilo do perfil */
+.meu-perfil {
+  display: flex;
+  justify-content: center; /* Alinha o perfil no centro */
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  gap: 10px; /* Espaço entre a imagem e o texto */
+  margin-top: 10px;
+}
+
+.meu-perfil img {
+  max-width: 50px; /* Tamanho da imagem do perfil */
+  border-radius: 50%; /* Deixa a imagem circular */
+  margin-bottom: 15px;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column; /* Organiza os itens do perfil verticalmente */
+  justify-content: center;
+}
+
+.perfil-info h1 {
+  font-size: 15px; /* Tamanho do nome */
+  margin: 0
+}
+
+.perfil-info p {
+  font-size: 14px; /* Tamanho do cargo */
+  color: #777; /* Cor para o cargo */
+  margin-top: 5px;
+}
+}
