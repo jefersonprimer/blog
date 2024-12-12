@@ -152,6 +152,11 @@ header {
 
 /* conteudo */
 /* Estrutura do post */
+
+a {
+  text-decoration: none;
+}
+
 .post {
   display: flex; /* Usando flexbox para alinhar a imagem à esquerda e o texto à direita */
   flex-direction: row; /* Organiza os itens na horizontal */

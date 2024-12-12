@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Post</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">Blog PrimerDev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Links</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Vídeos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Parcerias</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Detalhes do Post -->
+    <main class="container mt-5">
+      <div class="post-detalhes">
+        <h1>Primeiros Passos no Spring Boot</h1>
+        <p><strong>Data:</strong> 24 de agosto de 2024</p>
+        <div class="content">
+          <p>
+            Este é o conteúdo completo do post. Aqui você pode colocar o artigo, incluindo detalhes, imagens e outros elementos. O post pode ser sobre qualquer coisa relevante, como aprendizado de Spring Boot.
+          </p>
+          <p>
+            O conteúdo do post será mostrado de forma completa nesta página. O texto pode se estender conforme necessário.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+    
+        // Exemplo simples: carrega o título baseado no ID do post
+        const postTitle = document.querySelector("h1");
+        const postContent = document.querySelector(".content");
+    
+        // Aqui você pode usar uma lógica para trocar o conteúdo dependendo do postId
+        if (postId === '1') {
+          postTitle.textContent = "Primeiros Passos no Spring Boot";
+          postContent.innerHTML = `
+            <p>Este é o conteúdo completo do post sobre Spring Boot...</p>
+            <p>Aqui você pode detalhar tudo o que deseja sobre o tema.</p>
+          `;
+        } else if (postId === '2') {
+          postTitle.textContent = "Outro Post Exemplo";
+          postContent.innerHTML = "<p>Conteúdo do post 2...</p>";
+        }
+        // Adicione outras condições para os diferentes posts conforme necessário
+      }
+    </script>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
