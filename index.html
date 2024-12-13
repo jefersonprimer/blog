@@ -34,21 +34,33 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="search-bar">
-          <!-- <i class="bi bi-search"></i> -->
+
+        <div class="search-bar search-container">
+          <!-- Campo de pesquisa -->
           <input
-          type="text"
-          id="search-input"
-          class="form-control"
-          placeholder="Pesquisar um post..."
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Pesquisar um post..."
+            autocomplete="off"
           />
+          
+          <!-- Botão de ajuda -->
+          <button id="helpButton" title="Ajuda">?</button>
+          
+          <!-- Mensagem informativa (será exibida ao clicar no botão de ajuda) -->
+          <div id="message" class="message" style="display: none;">Digite 3 ou mais caracteres para começar a busca</div>
+          
+          <!-- Lista de sugestões de pesquisa -->
+          <ul id="suggestionsList" class="suggestions-list"></ul>
         </div>
+        
         <!-- Links de navegação -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="nav-links ms-auto">
-            <a href="#links" class="nav-link">Links</a>
-            <a href="#videos" class="nav-link">Vídeos</a>
-            <a href="#parcerias" class="nav-link">Parcerias</a>
+            <a href="#links" class="nav-link">Linkedin</a>
+            <a href="#videos" class="nav-link">Github</a>
+            <a href="#parcerias" class="nav-link">Portfólio</a>
           </div>
         </div>
       </nav>
@@ -71,6 +83,7 @@
           <span>Filtros:</span>
           <button class="filter-btn" data-filter="all">Todos os posts</button>
           <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
           <button class="filter-btn" data-filter="angular">Angular</button>
           <button class="filter-btn" data-filter="aws">AWS</button>
         </div>
@@ -81,7 +94,7 @@
         <div class="container card-container" id="posts-container">
           <!-- Exemplo de Post 1 -->
           <a href="post-detalhes.html?id=1">
-            <div class="card" data-tags="Java Spring">
+            <div class="card" data-tags="java Spring">
               <div class="post">
                 <div class="post-header">
                   <img src="image/cover.webp" alt="Imagem do Post" />
@@ -91,11 +104,11 @@
                     </p>
                     <h1>Primeiros Passos no Spring Boot</h1>
                     <p>
-                      Um resumo do post: Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Autem, ipsum, quibusdam odit aut id eius
-                      quisquam accusamus sunt corrupti ab cum asperiores fuga
-                      sequi saepe odio blanditiis perspiciatis mollitia
-                      dignissimos.
+                      O Spring Boot é um poderoso framework Java para o desenvolvimento de aplicações
+                      web. Além disso, ele é amplamente utilizado e constantemente melhorado pela 
+                      comunidade. Se você está começando com Spring Boot, este o post vai te ajudar
+                      a dar os primeiros passos nessa ferramenta tão importante para os Javeiros
+                      e Javeiras.
                     </p>
                   </div>
                 </div>
@@ -114,22 +127,23 @@
           </div>
 
           <!-- Exemplo de Post 2 -->
-          <a href="post-detalhes.html?id=1">
-            <div class="card" data-tags="java spring">
+          <a href="post-detalhes.html?id=2">
+            <div class="card" data-tags="javascript">
               <div class="post">
                 <div class="post-header">
-                  <img src="image/cover.webp" alt="Imagem do Post" />
+                  <img src="image/js.webp" alt="Imagem do Post" />
                   <div class="post-text">
                     <p class="data">
-                      24 de ago. de 2024 <span>java</span> <span>Spring</span>
+                      24 de ago. de 2024 <span>javascript</span>
                     </p>
-                    <h1>Primeiros Passos no Spring Boot</h1>
+                    <h1>Guia Iniciante sobre o Single Thread e Event Loop em JavaScript</h1>
                     <p>
-                      Um resumo do post: Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Autem, ipsum, quibusdam odit aut id eius
-                      quisquam accusamus sunt corrupti ab cum asperiores fuga
-                      sequi saepe odio blanditiis perspiciatis mollitia
-                      dignissimos.
+                      Guia Iniciante sobre o Single Thread e Event Loop em JavaScript
+                      Neste post vamos explorar de forma simplificada o que é o Single Thread
+                      e o Event Loop em JavaScript, conceitos fundamentais para qualquer 
+                      desenvolvedor frontend. Se você está começando com JavaScript, este é o 
+                      guia perfeito para entender como o JavaScript gerencia tarefas assíncronas 
+                      de maneira eficiente.
                     </p>
                   </div>
                 </div>
@@ -147,22 +161,20 @@
             </a>
           </div>
 
-          <a href="post-detalhes.html?id=1">
-            <div class="card" data-tags="java spring">
+          <a href="post-detalhes.html?id=3">
+            <div class="card" data-tags="aws cloud">
               <div class="post">
                 <div class="post-header">
-                  <img src="image/cover.webp" alt="Imagem do Post" />
+                  <img src="image/cc.webp" alt="Imagem do Post" />
                   <div class="post-text">
                     <p class="data">
-                      24 de ago. de 2024 <span>java</span> <span>Spring</span>
+                      24 de ago. de 2024 <span>cloud-computing</span> <span>seguranca</span>
                     </p>
-                    <h1>Primeiros Passos no Spring Boot</h1>
+                    <h1>3 Formas de Aumentar a Segurança na Nuvem</h1>
                     <p>
-                      Um resumo do post: Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Autem, ipsum, quibusdam odit aut id eius
-                      quisquam accusamus sunt corrupti ab cum asperiores fuga
-                      sequi saepe odio blanditiis perspiciatis mollitia
-                      dignissimos.
+                      Nesse post vamos explorar soluções que aumentem a eficiência, a segurança 
+                      e a disponibilidade dos dados quando falamos de Cloud Storage, ou 
+                      armazenamento em nuvem.
                     </p>
                   </div>
                 </div>
@@ -185,15 +197,16 @@
 
     <div id="menu-overlay" class="overlay">
       <div class="overlay-content">
-        <a href="#links" class="nav-link">Links</a>
-        <a href="#videos" class="nav-link">Vídeos</a>
-        <a href="#parcerias" class="nav-link">Parcerias</a>
+        <a href="#links" class="nav-link">Linkedin</a>
+        <a href="#videos" class="nav-link">GitHub</a>
+        <a href="#parcerias" class="nav-link">Portfólio</a>
       </div>
     </div>
 
     <script src="search.js"></script>
     <script src="scripts.js"></script>
     <script src="filtro.js"></script>
+    <script src="searchSujest.js"></script>
 
     <!-- Bootstrap JS e Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

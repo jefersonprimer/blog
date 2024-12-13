@@ -77,8 +77,6 @@
   // Lógica para gerar o conteúdo baseado no postId
   if (postId === '1') {
     postContent = `
-      
-    <!-- Detalhes do Post -->
     <main class="container mt-5">
       <div class="post-detalhes">
         <p class="product-path">
@@ -248,32 +246,184 @@
     `;
   } else if (postId === '2') {
     postContent = `
+    <main class="container mt-5">
       <div class="post-detalhes">
         <p class="product-path">
-          <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Outro Tema</a> / Outro Post Exemplo
+          <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">JavaScript</a> / <a href="#">Event Loop</a> / Guia Iniciante sobre o Single Thread e Event Loop em JavaScript
+          <hr>
         </p>
-        <hr>
-        <h1>Outro Post Exemplo</h1>
+
+        <h1>Guia Iniciante sobre o Single Thread e Event Loop em JavaScript</h1>
         <div class="meu-perfil">
-          <a href="https://exemplo.com">
+          <a href="https://jefersonprimer.github.com">
             <div class="meu-perfil">
-              <img src="image_detalhes/another-image.webp" alt="Foto de perfil" />
+              <img src="image/profile.jpg" alt="Foto de perfil" />
               <div class="perfil-info">
-                <h1>Outro Autor</h1>
-                <p>Desenvolvedor Full Stack</p>
+                <h1>Fernanda Kipper</h1>
+                <p>Engenheira de Software no Itaú</p>
               </div>
             </div>
           </a>
         </div>
         <hr>
-        <p><strong>Data:</strong> 12 de dezembro de 2024</p>
+
+        <p><strong>Data:</strong> 13 de dezembro de 2024</p>
         <div class="container content">
-          <article>
-            <h2>Conteúdo do Post Exemplo</h2>
-            <p>Conteúdo detalhado do segundo post...</p>
-          </article>
+            <article>
+                <h2>A Natureza Single Thread do JavaScript</h2>
+                <p>JavaScript é uma das linguagens de programação mais populares e amplamente usadas no desenvolvimento web. Com ela, os desenvolvedores criam desde interações simples em páginas web até aplicações complexas de frontend. Uma característica fundamental do JavaScript é sua natureza single thread, que significa que ele só pode executar uma tarefa por vez.</p>
+
+                <h3>Definição e Funcionamento</h3>
+                <p>O modelo single thread do JavaScript é uma das características mais importantes da linguagem. Em um único thread, o código JavaScript é executado de cima para baixo, linha por linha. Quando uma função é chamada, ela é adicionada à Pilha de Chamadas (Call Stack) e é executada assim que possível. Essa abordagem simplifica o desenvolvimento, mas também pode criar desafios, especialmente quando lidamos com operações demoradas, como chamadas de rede ou operações de I/O.</p>
+
+                <h3>Vantagens e Desvantagens do Modelo Single Thread</h3>
+                <p>O modelo single thread do JavaScript facilita a vida dos desenvolvedores, reduzindo a complexidade do código, uma vez que não precisamos nos preocupar com a sincronização de múltiplos threads. No entanto, essa simplicidade pode levar a problemas de desempenho se não lidarmos corretamente com operações assíncronas, como veremos ao explorar o Event Loop.</p>
+
+                <h2>O Que é o Event Loop?</h2>
+                <p>O Event Loop é o mecanismo que permite ao JavaScript realizar operações assíncronas enquanto ainda usa um único thread. Ele monitora a Pilha de Chamadas e a Fila de Tarefas (Task Queue), garantindo que as operações assíncronas sejam processadas assim que a pilha estiver vazia.</p>
+
+                <h3>Como o Event Loop Funciona?</h3>
+                <p>O Event Loop começa verificando a Pilha de Chamadas. Se a pilha estiver vazia, ele verifica a Task Queue. Se houver tarefas na fila, ele pega a primeira e a adiciona à Pilha de Chamadas para execução. Esse processo continua indefinidamente, garantindo que o código assíncrono seja executado na ordem correta, sem bloquear a execução do código síncrono.</p>
+                <img src="image_detalhes/single-thread-js.webp" alt="cover spring" id="image-spring">
+
+                <h2>A Pilha de Chamadas (Call Stack)</h2>
+                <h3>Entendendo a Call Stack</h3>
+                <p>A Pilha de Chamadas é uma estrutura de dados que registra onde no código estamos. Quando uma função é chamada, ela é adicionada ao topo da pilha. Quando a função termina, ela é removida da pilha, e o controle retorna à função anterior.</p>
+                <img src="image_detalhes/call-stack.webp" alt="cover spring" id="image-spring">
+
+                <h3>Como o JavaScript Executa Funções na Pilha de Chamadas</h3>
+                <p>Cada vez que o JavaScript executa uma função, ela a adiciona à Call Stack. Se essa função chamar outra função, esta também será adicionada à pilha. Esse processo continua até que a última função seja executada e removida da pilha.</p>
+
+                <h2>A Fila de Tarefas (Task Queue)</h2>
+                <p>A Task Queue é onde o JavaScript coloca as tarefas que precisam ser executadas depois que a Pilha de Chamadas estiver vazia. Quando uma operação assíncrona é concluída (como um <code>setTimeout</code> ou uma requisição <code>fetch</code>), o callback correspondente é colocado na Task Queue.</p>
+
+                <h3>Diferenças Entre Callbacks e Promises</h3>
+                <p>Callbacks e Promises são maneiras de lidar com operações assíncronas em JavaScript. Um callback é uma função que é passada como argumento e é executada depois que uma operação assíncrona é concluída. Promises, por outro lado, são objetos que representam a eventual conclusão (ou falha) de uma operação assíncrona e permitem um código mais legível e gerenciável.</p>
+
+                <h2>Async, Await e o Event Loop</h2>
+                <h3>Promises e Assíncrono em JavaScript</h3>
+                <p>O advento das Promises simplificou a escrita de código assíncrono em JavaScript. Promises permitem encadear operações assíncronas e tratá-las com métodos como <code>.then()</code> e <code>.catch()</code>, proporcionando um controle melhor sobre o fluxo do código.</p>
+
+                <h3>Como o Async/Await Interage com o Event Loop</h3>
+                <p>O Async/Await é uma sintaxe que facilita ainda mais o trabalho com Promises. Usando <code>async</code>, você pode declarar funções assíncronas que retornam uma Promise. Com <code>await</code>, você pode pausar a execução da função até que a Promise seja resolvida, tornando o código assíncrono mais legível e fácil de entender.</p>
+
+                <h2>Exemplos Práticos</h2>
+
+                <h3>Com Callbacks</h3>
+                <pre><code>
+    function fetchData(callback) {
+      setTimeout(() => {
+        console.log('Dados obtidos!');
+        callback();
+      }, 1000);
+    }
+
+    fetchData(() => {
+      console.log('Callback executado!');
+    });
+                </code></pre>
+
+                <h3>Com Promises</h3>
+                <pre><code>
+    function fetchData() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log('Dados obtidos!');
+          resolve();
+        }, 1000);
+      });
+    }
+
+    fetchData().then(() => {
+      console.log('Promise resolvida!');
+    });
+                </code></pre>
+
+                <h3>Com Async/Await</h3>
+                <pre><code>
+    async function fetchData() {
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          console.log('Dados obtidos!');
+          resolve();
+        }, 1000);
+      });
+      console.log('Async/Await finalizado!');
+    }
+
+    fetchData();
+                </code></pre>
+
+                <h2>Problemas Comuns e Soluções</h2>
+                <h3>Problemas de Desempenho com o Event Loop</h3>
+                <p>Um problema comum ao usar o Event Loop é o bloqueio da Call Stack, onde uma operação demorada impede que o Event Loop processe novas tarefas. Isso pode ser evitado dividindo operações grandes em tarefas menores ou utilizando APIs assíncronas adequadamente.</p>
+
+                <h3>Como Evitar o Bloqueio do Event Loop</h3>
+                <p>Para evitar bloquear o Event Loop, evite loops longos ou operações síncronas que demoram para executar. Sempre que possível, use APIs assíncronas para garantir que a interface do usuário permaneça responsiva.</p>
+
+                <h2>Boas Práticas</h2>
+                <h3>Escrevendo Código Eficiente</h3>
+                <p>Escrever código eficiente envolve pensar na performance e na experiência do usuário. Certifique-se de que suas funções não bloqueiam o Event Loop e que você usa APIs assíncronas para operações demoradas.</p>
+
+                <h3>Quando Usar Funcionalidades Assíncronas</h3>
+                <p>Use funcionalidades assíncronas sempre que lidar com operações que podem demorar, como chamadas de rede, leitura/escrita de arquivos, ou qualquer operação I/O. Isso mantém a aplicação rápida e responsiva.</p>
+
+                <h2>Conclusão</h2>
+                <p>Entender a natureza single thread do JavaScript e o funcionamento do Event Loop é essencial para escrever código eficiente e manter suas aplicações rápidas e responsivas. Para desenvolvedores frontend, dominar esses conceitos é crucial para garantir que as aplicações funcionem bem em ambientes reais, onde operações demoradas são inevitáveis. Com esse conhecimento, você pode evitar armadilhas comuns e garantir uma experiência de usuário suave.</p>
+            </article>
         </div>
       </div>
+    </main>
+
+    `;
+  } else if (postId === '3') {
+    postContent = `
+     <main class="container mt-5">
+  <div class="post-detalhes">
+    <p class="product-path">
+      <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Cloud Computing</a> / <a href="#">Segurança na Nuvem</a> / 3 Formas de Aumentar a Segurança na Nuvem
+      <hr>
+    </p>
+
+    <h1>3 Formas de Aumentar a Segurança na Nuvem</h1>
+    <div class="meu-perfil">
+      <a href="https://fernandakipper.github.com">
+        <div class="meu-perfil">
+          <img src="image/profile.jpg" alt="Foto de perfil" />
+          <div class="perfil-info">
+            <h1>Fernanda Kipper</h1>
+            <p>Engenheira de Software no Itaú</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <hr>
+
+    <p><strong>Data:</strong> 13 de dezembro de 2024</p>
+    <div class="container content">
+        <article>
+            <h2>Introdução</h2>
+            <p>Soluções que aumentem a eficiência, a segurança e a disponibilidade dos dados são essenciais quando estamos falando de Cloud Storage, ou armazenamento em nuvem. A seguir, abordamos três práticas fundamentais para garantir a segurança da informação na nuvem.</p>
+
+            <h2>1. Armazenamento Multi-Região</h2>
+            <p>Essa estratégia consiste em distribuir dados em várias regiões para garantir alta disponibilidade e resiliência. Armazenar cópias de dados em diferentes localizações geográficas (que é a definição de uma região) minimiza a latência e protege contra falhas regionais.</p>
+            <p>O Oracle Cloud Object Storage, por exemplo, oferece armazenamento de objetos replicado entre regiões, garantindo a continuidade dos negócios em caso de desastres.</p>
+
+            <h2>2. Gerenciamento de Ciclo de Vida dos Dados</h2>
+            <p>Implementar políticas de ciclo de vida dos dados para mover automaticamente os dados entre camadas de armazenamento com base em sua utilização ajuda a otimizar custos e gerenciar o armazenamento de forma mais eficiente.</p>
+            <p>Talvez você já tenha ouvido falar do <strong>Amazon S3 Intelligent-Tiering</strong>, uma funcionalidade do Simple Storage Service (S3) que faz essa mudança entre camadas de maneira automática, transferindo dados entre camadas com base na frequência de acesso.</p>
+
+            <h2>3. Acesso Seguro e Criptografia</h2>
+            <p>Garantir que os dados sejam protegidos tanto em trânsito quanto em repouso é essencial para a segurança da nossa aplicação. Para isso, podemos aplicar práticas avançadas de criptografia e controle de acesso rigoroso.</p>
+            <p>Na Cloud da Oracle, isso é facilitado através de ferramentas como o <strong>OCI Vault</strong>, que gerencia chaves de criptografia, o <strong>OCI IAM</strong> (Identity and Access Management), que controla acessos e permissões, e o <strong>Oracle Transparent Data Encryption (TDE)</strong>, que criptografa dados armazenados de forma transparente, sem a necessidade de alterações no código da aplicação.</p>
+
+            <h2>Conclusão</h2>
+            <p>Essas três práticas - armazenamento multi-região, gerenciamento de ciclo de vida dos dados e criptografia avançada - são essenciais para garantir a segurança e eficiência dos dados na nuvem. A utilização dessas tecnologias permite que as empresas se protejam contra falhas e ameaças, mantendo um ambiente seguro e confiável para seus usuários e negócios.</p>
+        </article>
+    </div>
+  </div>
+</main>
+
     `;
   } else {
     postContent = `
