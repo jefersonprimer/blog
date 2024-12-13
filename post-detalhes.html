@@ -54,6 +54,30 @@
       </nav>
     </header>
 
+  <main id="post-main">
+    <!-- O conteúdo do main será inserido dinamicamente pelo JS -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog PrimerDev - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    window.onload = function() {
+  // Obter o valor do postId da URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = urlParams.get('id');
+
+  // Seletor do main onde vamos substituir o conteúdo
+  const mainContainer = document.querySelector("#post-main");
+
+  // Variável para armazenar o conteúdo dinâmico do post
+  let postContent = '';
+
+  // Lógica para gerar o conteúdo baseado no postId
+  if (postId === '1') {
+    postContent = `
+      
     <!-- Detalhes do Post -->
     <main class="container mt-5">
       <div class="post-detalhes">
@@ -221,52 +245,67 @@
         </div>
       </div>
     </main>
-
-    <div id="menu-overlay" class="overlay">
-      <div class="overlay-content">
-        <a href="#" class="nav-link">Linkedin</a>
-        <a href="#videos" class="nav-link">GitHub</a>
-        <a href="#parcerias" class="nav-link">Portfólio</a>
+    `;
+  } else if (postId === '2') {
+    postContent = `
+      <div class="post-detalhes">
+        <p class="product-path">
+          <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Outro Tema</a> / Outro Post Exemplo
+        </p>
+        <hr>
+        <h1>Outro Post Exemplo</h1>
+        <div class="meu-perfil">
+          <a href="https://exemplo.com">
+            <div class="meu-perfil">
+              <img src="image_detalhes/another-image.webp" alt="Foto de perfil" />
+              <div class="perfil-info">
+                <h1>Outro Autor</h1>
+                <p>Desenvolvedor Full Stack</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <hr>
+        <p><strong>Data:</strong> 12 de dezembro de 2024</p>
+        <div class="container content">
+          <article>
+            <h2>Conteúdo do Post Exemplo</h2>
+            <p>Conteúdo detalhado do segundo post...</p>
+          </article>
+        </div>
       </div>
-    </div>
+    `;
+  } else {
+    postContent = `
+      <div class="post-detalhes">
+        <h1>Post Não Encontrado</h1>
+        <p>Desculpe, mas não encontramos o post solicitado.</p>
+        <p>Tem apenas 10 posts no blog, entao tente na url o id=1 a id=10</p>
+      </div>
+    `;
+  }
 
-    <script src="search.js"></script>
-    <script src="scripts.js"></script>
-    <script src="filtro.js"></script>
+  // Inserindo o conteúdo dinâmico no main
+  mainContainer.innerHTML = postContent;
+};
 
-    <!-- Bootstrap JS e Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  </script>
 
-    <script>
-      window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const postId = urlParams.get('id');
-    
-        // Exemplo simples: carrega o título baseado no ID do post
-        const postTitle = document.querySelector("h1");
-        const postContent = document.querySelector(".content");
-    
-        // Aqui você pode usar uma lógica para trocar o conteúdo dependendo do postId
-        if (postId === '1') {
-          postTitle.textContent = "Primeiros Passos no Spring Boot";
-          postContent.innerHTML = `
-            <p>Este é o conteúdo completo do post sobre Spring Boot...</p>
-            <p>Aqui você pode detalhar tudo o que deseja sobre o tema.</p>
-          `;
-        } else if (postId === '2') {
-          postTitle.textContent = "Outro Post Exemplo";
-          postContent.innerHTML = "<p>Conteúdo do post 2...</p>";
-        }
-        // Adicione outras condições para os diferentes posts conforme necessário
-      }
-    </script>
-    
+<div id="menu-overlay" class="overlay">
+  <div class="overlay-content">
+    <a href="#" class="nav-link">Linkedin</a>
+    <a href="#videos" class="nav-link">GitHub</a>
+    <a href="#parcerias" class="nav-link">Portfólio</a>
+  </div>
+</div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  </body>
+<script src="search.js"></script>
+<script src="scripts.js"></script>
+<script src="filtro.js"></script>
+
+<!-- Bootstrap JS e Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
 </html>
