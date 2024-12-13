@@ -3,26 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalhes do Post</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <title>Primeiros Passos no Spring Boot | Jeferson Primer | Dev</title>
+    <link rel="stylesheet" href="post-detalhes.css" />
+    <link rel="stylesheet" href="mobile-post-detalhes.css" />
   </head>
   <body>
+    <!--  -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">Blog PrimerDev</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-dark ms-5 me-5">
+        <div class="logo">
+          <img src="image/logo.png" alt="Logo do Blog" />
+        </div>
+        <!-- -->
+        
+        <!-- Botão de alternância para telas pequenas -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          id="hamburger-btn"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="search-bar">
+          <!-- <i class="bi bi-search"></i> -->
+          <input
+          type="text"
+          id="search-input"
+          class="form-control"
+          placeholder="Pesquisar um post..."
+          />
+        </div>
+        <!-- Links de navegação -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Links</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Vídeos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Parcerias</a></li>
-          </ul>
+          <div class="nav-links ms-auto">
+            <a href="#" class="nav-link">Linkedin</a>
+            <a href="#videos" class="nav-link">GitHub</a>
+            <a href="#parcerias" class="nav-link">Portfólio</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -30,18 +57,188 @@
     <!-- Detalhes do Post -->
     <main class="container mt-5">
       <div class="post-detalhes">
+        <p class="product-path">
+          <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Java</a> / <a href="#">Spring</a> / Primeiros Passos no Spring Boot
+        <hr>
+        </p>
+
         <h1>Primeiros Passos no Spring Boot</h1>
+        <div class="meu-perfil">
+          <a href="https://jefersonprimer.github.com">
+            <div class="meu-perfil">
+              <img src="image/profile.jpg" alt="Foto de perfil" />
+              <div class="perfil-info">
+                <h1>Jeferson Primer</h1>
+                <p>Engenheiro de Software</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <hr>
+
         <p><strong>Data:</strong> 24 de agosto de 2024</p>
-        <div class="content">
-          <p>
-            Este é o conteúdo completo do post. Aqui você pode colocar o artigo, incluindo detalhes, imagens e outros elementos. O post pode ser sobre qualquer coisa relevante, como aprendizado de Spring Boot.
-          </p>
-          <p>
-            O conteúdo do post será mostrado de forma completa nesta página. O texto pode se estender conforme necessário.
-          </p>
+        <div class="container content">
+            <article>
+                <h1>Introdução ao Spring Boot</h1>
+                <p>Spring Boot é um framework poderoso para a construção de aplicações Java, que visa simplificar o processo de desenvolvimento, oferecendo uma configuração inicial mínima e uma abordagem “opinionated” para começar. Ele é construído em cima do Spring Framework, mas elimina a complexidade de configuração manual, permitindo que os desenvolvedores foquem no desenvolvimento de funcionalidades.</p>
+                
+                <h2>Por que Usar o Spring Boot?</h2>
+                <p>O Spring Boot é amplamente utilizado no desenvolvimento de aplicações web por várias razões:</p>
+                <ul>
+                    <li><strong>Configuração Simplificada:</strong> Com o Spring Boot, a maior parte da configuração inicial é feita automaticamente, o que acelera o desenvolvimento.</li>
+                    <li><strong>Facilidade de Uso:</strong> Ele oferece várias funcionalidades pré-configuradas que facilitam a criação de aplicativos robustos sem precisar reinventar a roda.</li>
+                    <li><strong>Suporte a Microservices:</strong> Spring Boot é uma escolha popular para o desenvolvimento de microservices devido à sua leveza e flexibilidade.</li>
+                    <li><strong>Documentação e Comunidade:</strong> Há uma vasta quantidade de recursos e uma comunidade ativa que facilita a resolução de problemas e o aprendizado contínuo.</li>
+                </ul>
+        
+                <h2>Instalando e Configurando o Spring Boot</h2>
+                <h3>Requisitos</h3>
+                <p>Antes de começar, certifique-se de ter o Java JDK (versão 8 ou superior) e uma IDE como IntelliJ IDEA ou Eclipse instalados em seu ambiente de desenvolvimento.</p>
+        
+                <h3>Criando um Projeto com Spring Initializer</h3>
+                <img src="image_detalhes/spring.webp" alt="cover spring" id="image-spring">
+                <p><strong>Spring Initializr</strong> é uma ferramenta online que facilita a criação de novos projetos Spring Boot. Para iniciar:</p>
+                <ol>
+                    <li>Acesse o Spring Initializr.</li>
+                    <li>Configure o seu projeto escolhendo as dependências necessárias, como Spring Web, Spring Data JPA, ou Spring Security.</li>
+                    <li>Selecione o "Project" como Maven.</li>
+                    <li>Baixe o projeto gerado e importe-o para sua IDE.</li>
+                </ol>
+        
+                <h3>Estrutura do Projeto</h3>
+                <img src="image_detalhes/dir-struct.webp" alt="Estrutura do projeto">
+                <p>Ao criar um projeto Spring Boot, você verá uma estrutura de pastas simples:</p>
+                <ul>
+                    <li><code>src/main/java:</code> Onde o código fonte principal é armazenado.</li>
+                    <li><code>src/main/resources:</code> Contém arquivos de configuração como <code>application.properties</code>.</li>
+                    <li><code>src/test/java:</code> Destinado aos testes de unidade.</li>
+                </ul>
+        
+                <h2>Criando Seu Primeiro Controlador (Controller)</h2>
+                <p>Um dos primeiros componentes que você geralmente cria em um aplicativo Spring Boot é um Controller. Um Controller gerencia as requisições HTTP e define as respostas.</p>
+        
+                <h3>Exemplo de um Controller Simples:</h3>
+                <pre><code>
+        package com.example.demo;
+        
+        import org.springframework.web.bind.annotation.GetMapping;
+        import org.springframework.web.bind.annotation.RestController;
+        
+        @RestController
+        public class HelloController {
+        
+            @GetMapping("/hello")
+            public String sayHello() {
+                return "Hello, Spring Boot!";
+            }
+        }
+                </code></pre>
+                <p>Aqui, o método <code>sayHello()</code> responde à rota <code>/hello</code> com a mensagem "Hello, Spring Boot!". O <code>@RestController</code> indica que a classe é um controlador REST, e o <code>@GetMapping</code> associa o método à rota GET <code>/hello</code>.</p>
+        
+                <h2>Configurações Básicas com <code>application.properties</code></h2>
+                <p>O arquivo <code>application.properties</code>, encontrado em <code>src/main/resources</code>, permite configurar várias propriedades da aplicação. Exemplos comuns incluem:</p>
+                <pre><code>
+        server.port=8081
+        spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+        spring.datasource.username=root
+        spring.datasource.password=secret
+                </code></pre>
+                <p>Essas configurações mudam a porta do servidor e configuram a conexão com um banco de dados MySQL.</p>
+        
+                <h2>Integração com Banco de Dados</h2>
+                <p>Para persistir dados, o Spring Boot integra-se facilmente com bancos de dados usando o Spring Data JPA.</p>
+        
+                <h3>Configuração de Dependência:</h3>
+                <p>No arquivo <code>pom.xml</code>, adicione a dependência do Spring Data JPA e o driver do banco de dados:</p>
+                <pre><code>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+                </code></pre>
+        
+                <h3>Criando uma Entidade:</h3>
+                <pre><code>
+        package com.example.demo;
+        
+        import javax.persistence.Entity;
+        import javax.persistence.GeneratedValue;
+        import javax.persistence.GenerationType;
+        import javax.persistence.Id;
+        
+        @Entity
+        public class User {
+        
+            @Id
+            @GeneratedValue(strategy = GenerationType.IDENTITY)
+            private Long id;
+            private String name;
+        
+            // getters and setters
+        }
+                </code></pre>
+        
+                <h3>Criando um Repositório:</h3>
+                <pre><code>
+        package com.example.demo;
+        
+        import org.springframework.data.jpa.repository.JpaRepository;
+        
+        public interface UserRepository extends JpaRepository<User, Long> {
+        }
+                </code></pre>
+                <p>O repositório fornece métodos prontos para operações de CRUD (Create, Read, Update, Delete) com a entidade <code>User</code>.</p>
+        
+                <h2>Testes com Spring Boot</h2>
+                <p>Spring Boot facilita a criação de testes de unidade e integração. A anotação <code>@SpringBootTest</code> carrega o contexto da aplicação para testar componentes de forma realista.</p>
+        
+                <h3>Exemplo de Teste Simples:</h3>
+                <pre><code>
+        package com.example.demo;
+        
+        import org.junit.jupiter.api.Test;
+        import org.springframework.boot.test.context.SpringBootTest;
+        
+        import static org.assertj.core.api.Assertions.assertThat;
+        
+        @SpringBootTest
+        class DemoApplicationTests {
+        
+            @Test
+            void contextLoads() {
+                assertThat(true).isTrue();
+            }
+        }
+                </code></pre>
+        
+                <h2>Conclusão</h2>
+                <p>O Spring Boot é uma ferramenta poderosa que simplifica o desenvolvimento de aplicações Java, especialmente na construção de APIs e microservices. Com uma configuração mínima e uma vasta gama de funcionalidades prontas para uso, ele permite que os desenvolvedores foquem mais na lógica de negócios e menos em configurações tediosas. Esses primeiros passos são apenas o início de uma jornada cheia de possibilidades com o Spring Boot.</p>
+            </article>
         </div>
       </div>
     </main>
+
+    <div id="menu-overlay" class="overlay">
+      <div class="overlay-content">
+        <a href="#" class="nav-link">Linkedin</a>
+        <a href="#videos" class="nav-link">GitHub</a>
+        <a href="#parcerias" class="nav-link">Portfólio</a>
+      </div>
+    </div>
+
+    <script src="search.js"></script>
+    <script src="scripts.js"></script>
+    <script src="filtro.js"></script>
+
+    <!-- Bootstrap JS e Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
 
     <script>
       window.onload = function() {
