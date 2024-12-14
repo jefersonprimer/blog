@@ -8,7 +8,7 @@ header {
   justify-content: center;  
   align-items: center;
   background-color: #343a40;
-  padding: 0px 20px; /* 10px 20px */
+  padding: 1px 20px; /* 10px 20px */
   margin-bottom: 6vh;
 }
 
@@ -305,4 +305,12 @@ a {
 
 .suggestions-list.active {
   display: block; 
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }

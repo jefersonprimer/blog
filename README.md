@@ -1,0 +1,1 @@
+falar sobre minha iniciativa de colocar cores que nao machuca a visao para leituras mais demoradas
