@@ -1,3 +1,69 @@
+/* global */
+/* font family */
+html {
+  font-size: 16px; /* Base padrão para desktop */
+}
+
+/* Corpo do texto */
+body {
+  font-size: 1rem; /* Igual ao tamanho da fonte base */
+}
+
+/* Títulos e parágrafos */
+h1 {
+  font-size: 2rem; /* 32px em desktops */
+}
+h2 {
+  font-size: 1.75rem; /* 28px em desktops */
+}
+p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6; /* Melhor legibilidade */
+}
+
+/* Responsividade com media queries */
+@media (max-width: 768px) { /* Tablets */
+  html {
+    font-size: 15px; /* Reduz um pouco o tamanho base */
+  }
+  h1 {
+    font-size: 1.8rem; /* 27px */
+  }
+  h2 {
+    font-size: 1.6rem; /* 24px */
+  }
+  p {
+    font-size: 0.95rem; /* 14.25px */
+  }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+  html {
+    font-size: 14px; /* Menor base para telas pequenas */
+  }
+  h1 {
+    font-size: 1.6rem; /* 22.4px */
+  }
+  h2 {
+    font-size: 1.4rem; /* 19.6px */
+  }
+  p {
+    font-size: 0.9rem; /* 12.6px */
+  }
+}
+
+/* Responsividade moderna com clamp() */
+h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem); /* Adapta-se entre 28px e 40px */
+}
+h2 {
+  font-size: clamp(1.6rem, 2vw, 2.2rem); /* Adapta-se entre 24px e 35px */
+}
+p {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Adapta-se entre 14px e 17.6px */
+}
+
+
 body, html {
   overflow-x: hidden;
 }
@@ -7,9 +73,8 @@ header {
   display: flex;
   justify-content: center;  
   align-items: center;
-  background-color: #343a40;
+  background-color: #2F2F2F;
   padding: 1px 20px; /* 10px 20px */
-  margin-bottom: 6vh;
 }
 
 /* Navbar styles */
@@ -70,7 +135,7 @@ header {
 }
 
 .nav-links a {
-  color: white;
+  color: #1A73E8;
   text-decoration: none;
 }
 
@@ -78,14 +143,21 @@ header {
   text-decoration: underline;
 }
 
+main {
+  background-color: #FAF8F5;
+  color: #333333;
+  padding-bottom: 10vh;
+}
+
 .home {
+  padding-top: 6vh;
   display: flex;            
   flex-direction: column; 
   align-items: flex-start;  
   margin: 0 auto;           
   max-width: 800px;
   width: 100%;          
-  height: auto;          
+  height: auto;
 }
 
 .home h1, .home p {
@@ -169,6 +241,9 @@ a {
   width: 100%; 
   max-width: 800px; 
   margin: 20px auto; 
+  border: none;
+  border-bottom: 1px solid #D1D1D1;
+  background-color: #FAF8F5;
 }
 
 
@@ -207,7 +282,7 @@ a {
 }
 
 .post-text span {
-  border-radius: 50%;
+  border-radius: 5%;
   padding: 5px 10px;
   background-color: #1212;
   color: black;
@@ -307,10 +382,56 @@ a {
   display: block; 
 }
 
+
 footer {
+  background-color: #2F2F2F; /* Fundo escuro */
+  color: #FFFFFF; /* Texto claro */
+  padding: 20px;
+  text-align: center; /* Centraliza o texto dentro de cada linha */
+}
+
+.footer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  flex-direction: column; /* Organiza as seções verticalmente */
+  align-items: center; /* Centraliza os itens */
+  gap: 20px; /* Espaçamento entre as linhas */
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+.footer-rights p {
+  margin: 0; /* Remove o margin extra */
+  font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+}
+
+.footer-rights a {
+  color: #A8D5BA; /* Cor do link */
+  text-decoration: none;
+}
+
+.footer-rights a:hover {
+  color: #81B29A; /* Cor do link no hover */
+}
+
+footer a {
+  color: #A8D5BA; /* Cor dos links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #81B29A; /* Cor no hover */
+}
+
+footer i {
+  font-size: 35px;
 }

@@ -10,6 +10,9 @@
       rel="stylesheet"
     />
 
+    <!-- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <title>Blog | Jeferson Primer | Dev</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile.css" />
@@ -19,7 +22,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark ms-5 me-5">
         <div class="logo">
-          <img src="image/logo.png" alt="Logo Primerdev" />
+          <a href="/index.html"><img src="image/logo.png" alt="Logo Primerdev" /></a>
         </div>
         <!-- -->
         
@@ -197,8 +200,35 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 Blog <a href="https://www.linkedin.com/in/jeferson-primer/" target="_blank">PrimerDev</a> - Todos os direitos reservados.</p>
+      <div class="footer-container">
+        <!-- Linha 1: Ícones de redes sociais -->
+        <div class="footer-icons">
+          <a href="mailto:seuemail@dominio.com" target="_blank">
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a href="https://github.com/seuperfil" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/seuperfil" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+    
+        <!-- Linha 2: Links de navegação -->
+        <div class="footer-links">
+          <a href="/sobre">Sobre</a>
+          <a href="/contato">Contato</a>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+        </div>
+        
+        <!-- Linha 3: Direitos autorais -->
+        <div class="footer-rights">
+          <p>&copy; 2024 Blog <a href="https://www.linkedin.com/in/jeferson-primer/" target="_blank">PrimerDev</a> - Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
+    
+    
 
     <div id="menu-overlay" class="overlay">
       <div class="overlay-content">
