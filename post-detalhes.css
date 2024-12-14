@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body, html {
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* CSS Atualizado */
@@ -10,9 +13,12 @@ header {
   display: flex;
   justify-content: center;  /* Centraliza o conteúdo no header */
   align-items: center;
-  background-color: #343a40;
+  background-color: #2F2F2F;
   padding: 10px 20px;
-  margin-bottom: 6vh;
+}
+
+header a {
+  text-decoration: none!important;
 }
 
 /* Navbar com responsividade */
@@ -158,6 +164,12 @@ header {
   }
 }
 
+main {
+  padding-top: 10px;
+  background-color: #FAF8F5!important;
+  color: #333333;
+  padding-bottom: 10vh;
+}
 
 .home {
   display: flex;            /* Usando flexbox */
@@ -253,7 +265,6 @@ a {
   margin: 20px auto; /* Centraliza os cards na tela */
 }
 
-
 .post {
   display: flex;
   flex-direction: row; 
@@ -326,8 +337,6 @@ a {
   margin-top: 5px;
 }
 
-
-
 .content {
   margin-bottom: 100px;
 }
@@ -337,13 +346,58 @@ a {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  background-color: wheat;
+  background-color: #2F2F2F; /* Fundo escuro */
+  color: #FFFFFF; /* Texto claro */
+  padding: 20px;
+  text-align: center; /* Centraliza o texto dentro de cada linha */
 }
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Organiza as seções verticalmente */
+  align-items: center; /* Centraliza os itens */
+  gap: 20px; /* Espaçamento entre as linhas */
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+.footer-rights p {
+  margin: 0; /* Remove o margin extra */
+  font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+}
+
+.footer-rights a {
+  color: #A8D5BA; /* Cor do link */
+  text-decoration: none;
+}
+
+.footer-rights a:hover {
+  color: #81B29A; /* Cor do link no hover */
+}
+
+footer a {
+  color: #A8D5BA; /* Cor dos links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #81B29A; /* Cor no hover */
+}
+
+footer i {
+  font-size: 35px;
+}
+
 
 
 
