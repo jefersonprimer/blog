@@ -2,23 +2,20 @@ body, html {
   overflow-x: hidden;
 }
 
-/* CSS Atualizado */
-
-/* Ajeitando o header e navbar para dispositivos móveis */
-/* Estilo do header */
+/* header style */
 header {
   display: flex;
-  justify-content: center;  /* Centraliza o conteúdo no header */
+  justify-content: center;  
   align-items: center;
   background-color: #343a40;
-  padding: 10px 20px;
+  padding: 0px 20px; /* 10px 20px */
   margin-bottom: 6vh;
 }
 
-/* Navbar com responsividade */
+/* Navbar styles */
 .navbar {
   display: flex;
-  justify-content: space-between;  /* Distribui logo, links e barra de pesquisa */
+  justify-content: space-between; 
   align-items: center;
   width: 100%;
 }
@@ -27,79 +24,29 @@ header {
 .navbar .logo img {
   filter: brightness(0) invert(1);
   max-width: 150px;
-  
   margin-right: 10rem;
 }
 
-/* Links de navegação */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;  /* Alinha os links à esquerda */
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* Barra de pesquisa */
-.navbar .search-bar {
+/* Search styles */
+/* .navbar .search-bar {
   display: flex;
   justify-content: flex-end;
-  margin-left: auto;  /* Coloca a barra de pesquisa ao lado direito dos links */
+  margin-left: auto;  
   width: 30%;
-}
+} */
 
 .navbar .search-bar input {
   width: 100%;
   padding: 8px;
-  align-items: right;
 }
 
-/* Responsividade - Para telas menores */
-@media (max-width: 992px) {
-  .navbar .search-bar {
-    width: 100%;  /* A barra de pesquisa ocupa toda a largura em telas pequenas */
-  }
 
-  .nav-links {
-    display: flex;
-    flex-direction: column; /* Torna os links verticais em telas pequenas */
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .navbar-toggler {
-    display: block;  /* Exibe o botão de alternância */
-  }
-
-  .navbar-collapse {
-    display: none;
-  }
-
-  .navbar-toggler.collapsed + .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-    width: 100%;  /* Garante que o menu ocupe toda a largura */
-  }
-}
-
-/* Navbar com responsividade */
+/* Navbar styles */
 .navbar {
   display: flex;
-  justify-content: space-between;  /* Logo, links e pesquisa são distribuídos */
+  justify-content: space-between;  
   align-items: center;
   width: 100%;
-}
-
-.navbar .logo img {
-  filter: brightness(0) invert(1);
-  max-width: 150px;
 }
 
 /* Barra de pesquisa */
@@ -116,10 +63,10 @@ header {
   padding: 8px;
 }
 
-/* Links da navegação */
 .nav-links {
   display: flex;
   gap: 20px;
+  justify-content: flex-start;
 }
 
 .nav-links a {
@@ -131,52 +78,24 @@ header {
   text-decoration: underline;
 }
 
-/* Responsividade - Para telas menores */
-@media (max-width: 992px) {
-  .navbar .search-bar {
-    max-width: 100%;  /* Ajusta a barra de pesquisa em telas pequenas */
-  }
-  
-  .nav-links {
-    display: flex;
-    flex-direction: column; /* Torna os links verticais em telas pequenas */
-    gap: 10px;
-  }
-
-  .navbar-toggler {
-    display: block;  /* Exibe o botão de alternância */
-  }
-  
-  .navbar-collapse {
-    display: none;
-  }
-  
-  .navbar-toggler.collapsed + .navbar-collapse {
-    display: flex; /* Exibe os links quando o botão de alternância for clicado */
-    flex-direction: column;
-    width: 100%;  /* Garante que o menu ocupe a largura toda */
-  }
-}
-
-
 .home {
-  display: flex;            /* Usando flexbox */
-  flex-direction: column;   /* Coloca os elementos em coluna */
-  align-items: flex-start;  /* Alinha os itens à esquerda (não centraliza) */
-  margin: 0 auto;           /* Centraliza horizontalmente o container */
-  max-width: 800px;         /* Largura máxima para a home */
-  width: 100%;              /* Garante que ocupe 100% da largura até a largura máxima */
-  height: auto;             /* Garante que o tamanho se ajuste ao conteúdo */
+  display: flex;            
+  flex-direction: column; 
+  align-items: flex-start;  
+  margin: 0 auto;           
+  max-width: 800px;
+  width: 100%;          
+  height: auto;          
 }
 
 .home h1, .home p {
-  text-align: left;         /* Garante que todos os textos fiquem alinhados à esquerda */
-  margin: 0;                /* Remove a margem padrão */
+  text-align: left;         
+  margin: 0;               
 }
 
 
 
-/* Overlay de navegação */
+/* Overlay nav */
 /* Alteração na classe do ícone do hambúrguer */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'%3E%3C/path%3E%3C/svg%3E");
@@ -186,7 +105,6 @@ header {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 6l18 18M6 24L24 6'%3E%3C/path%3E%3C/svg%3E");
 }
 
-/* Overlay que vai aparecer com os links */
 .overlay {
   position: fixed;
   top: 0;
@@ -240,17 +158,17 @@ header {
 }
 
 
-/* Estrutura do post container */
+/* Structure of container */
 
 a {
-  color: inherit; /* Herda a cor do elemento pai */
-  text-decoration: none; /* Remove o sublinhado padrão */
+  color: inherit;
+  text-decoration: none;
 }
 
 .card {
-  width: 100%; /* Ajuste a largura conforme necessário */
-  max-width: 800px; /* Limite o tamanho máximo se necessário */
-  margin: 20px auto; /* Centraliza os cards na tela */
+  width: 100%; 
+  max-width: 800px; 
+  margin: 20px auto; 
 }
 
 
@@ -295,7 +213,7 @@ a {
   color: black;
 }
 
-/* Estilo do perfil */
+/* perfil styles container*/
 .meu-perfil {
   display: flex;
   justify-content: center; 
@@ -312,25 +230,21 @@ a {
 
 .perfil-info {
   display: flex;
-  flex-direction: column; /* Organiza os itens do perfil verticalmente */
+  flex-direction: column; 
   justify-content: center;
 }
 
 .perfil-info h1 {
-  font-size: 15px; /* Tamanho do nome */
+  font-size: 15px; 
   margin: 0
 }
 
 .perfil-info p {
-  font-size: 14px; /* Tamanho do cargo */
-  color: #777; /* Cor para o cargo */
+  font-size: 14px; 
+  color: #777; 
   margin-top: 5px;
 }
 
-
-
-/* css new input*/
-/* Estilos gerais */
 /* Estilos para o campo de pesquisa */
 .search-container {
   position: relative;
@@ -340,11 +254,11 @@ a {
 #searchInput {
   padding: 10px;
   width: 200px;
-  transition: width 0.4s ease; /* Transição suave */
+  transition: width 0.4s ease;
 }
 
 #searchInput.expanded {
-  width: 400px; /* Largura expandida */
+  width: 400px; 
 }
 
 #helpButton {
@@ -375,7 +289,7 @@ a {
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
-  display: none; /* Inicialmente oculta */
+  display: none; 
   max-height: 200px;
   overflow-y: auto;
 }
@@ -390,25 +304,5 @@ a {
 }
 
 .suggestions-list.active {
-  display: block; /* Torna visível quando estiver ativa */
+  display: block; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
