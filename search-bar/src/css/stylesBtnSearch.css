@@ -16,6 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #c7d2fe;
+    position: relative;
 }
 
 /* Grupo do input de pesquisa */
@@ -26,6 +27,14 @@ body {
     padding: 8px 16px 8px 8px;
     border-radius: 24px;
     gap: 8px;
+    transition: width 0.3s ease-in-out;
+    max-width: 400px;
+}
+
+/* Expande o input de pesquisa quando clicado */
+.input-group.active {
+    width: 80vw;
+    max-width: 700px;
 }
 
 /* Ícone do input de pesquisa */
@@ -46,11 +55,34 @@ body {
     width: 100%;
     border: none;
     background-color: transparent;
+    font-size: 16px;
+    padding: 8px 0;
 }
 
 /* Remove a borda quando o campo está em foco */
 .input-field:focus {
     outline: none;
+}
+
+/* Adiciona a animação do campo de pesquisa */
+.input-field:focus + .input-icon {
+    transform: scale(1.1);
+}
+
+/* Label de ajuda */
+#message {
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px); /* Inicialmente escondido */
+}
+
+#help-label {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.input-group.active {
+    width: 80vw; /* Ajuste da largura quando o campo de busca está ativo */
 }
 
 /* Lista de itens */
@@ -66,12 +98,14 @@ body {
     gap: 12px;
     max-height: 421px;
     overflow-y: auto;
+    margin-top: 20px;
 }
 
 /* Item individual da lista */
 .item {
     display: flex;
     gap: 12px;
+    margin-bottom: 8px;
 }
 
 /* Imagem do item */
@@ -111,4 +145,24 @@ body {
 #no_results {
     display: none;
     text-align: center;
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* Estilos para o campo de ajuda e mensagem */
+.input-group,
+#help-label,
+#message {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ajuste visual quando o input é expandido */
+.input-group.active + #help-label {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.input-group.active + #help-label + #message {
+    opacity: 1;
+    transform: translateY(10px);
 }
