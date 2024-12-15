@@ -23,7 +23,6 @@
           <a href="/index.html"><img src="/images_home/logo.png" alt="Logo Primerdev" /></a>
         </div>
 
-
         <div class="search-bar">
           <input
             type="text"
@@ -33,7 +32,17 @@
             autocomplete="off"
           />
         </div>
-
+        <!-- hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          id="hamburger-btn"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="nav-links">
           <a href="https://www.linkedin.com/in/jeferson-primer/" target="_blank" class="nav-link">Linkedin</a>
@@ -55,13 +64,13 @@
           </p>
         </div>
         <!--  -->
-        <div class="filtro ms-4 me-3 mt-4 mb-5">
+        <div class="filtro">  <!-- ms-4 me-3 mt-4 mb-5 -->
           <span>Filtros:</span>
-          <button class="filter-btn" data-filter="all">Todos os posts</button>
+          <button class="filter-btn" data-filter="all">Todos</button>
           <button class="filter-btn" data-filter="java">Java</button>
           <button class="filter-btn" data-filter="javascript">JavaScript</button>
           <button class="filter-btn" data-filter="angular">Angular</button>
-          <button class="filter-btn" data-filter="aws">AWS</button>
+          <button class="filter-btn" data-filter="aws">Aws</button>
         </div>
       </section>
 
@@ -212,7 +221,6 @@
     <script src="js/search.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/filtro.js"></script>
-    <script src="js/searchSuggestion.js"></script>
 
     <!--  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

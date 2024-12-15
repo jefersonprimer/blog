@@ -10,140 +10,166 @@
     background-color: #1a1a1a;
   }
 }
+  
+/* Exibe o botão hambúrguer por padrão */
+.navbar-toggler {
+  display: block;
+}
 
+/* Esconde o botão hambúrguer para telas maiores que 768px */
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+/* my phone */
 @media (max-width: 768px) {
-
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
 
-  /* header style */
+  body, html {
+    overflow-x: hidden;
+  }
+
   header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;  /* Espaçamento entre logo, barra de pesquisa e botão de hambúrguer */
-    align-items: center;
+    justify-content: space-between; /* Espaça logo e hambúrguer horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     background-color: #2F2F2F;
-    padding: 10px 20px;
   }
 
-  /* Logo */
-  .navbar .logo img {
-    max-width: 120px; /* Tamanho da logo ajustado */
-    filter: brightness(0) invert(1); /* Logo invertida para cores claras */
-  }
-
-  /* Barra de pesquisa */
-  .navbar .search-bar {
+  .navbar {
     display: flex;
-    justify-content: center; /* Centraliza a barra de pesquisa */
-    align-items: center; /* Alinha o conteúdo verticalmente */
-    flex: 1; /* Faz a barra de pesquisa ocupar o máximo de espaço disponível */
-    margin: 0 10px; /* Ajusta o espaço ao redor */
+    align-items: center;
+    width: 100%;
+    gap: 6px;
   }
 
-  .navbar .search-bar input {
-    width: 100%;  /* Barra de pesquisa ocupa 100% da largura do seu contêiner */
-    max-width: 250px; /* Largura máxima da barra */
-    padding: 8px;
-    border-radius: 20px; /* Cantos arredondados */
-    border: none;
+  .navbar .logo {
+    flex-shrink: 0; /* Evita que a logo encolha */
   }
 
-  /* Botão do hambúrguer */
-  .navbar .navbar-toggler {
-    display: block; /* Torna o botão visível em telas pequenas */
-    background-color: transparent;
-    border: none;
+  .navbar .logo img {
+    max-width: 130px;
+    height: auto;
+  }
+
+  #searchInput {
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .search-bar input {
+    width: 10%;
+    max-width: 200px;
+  }
+  
+  .navbar .nav-links {
+    display: none; /* Esconde os links na tela menor */
+  }
+
+  .navbar-toggler {
+    display: block; /* Exibe o botão hambúrguer */
     cursor: pointer;
   }
 
-  .navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'%3E%3C/path%3E%3C/svg%3E");
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
   }
 
-  /* Estilo de links de navegação, ocultados ou ajustados conforme necessário */
-  .nav-links {
+  /* Extra: Centraliza o menu no modal ao abrir */
+  .nav-links.active {
     display: flex;
-    gap: 20px;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Ajuste baseado na altura do header */
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
   }
 
-  .nav-links a {
-    color: #1a73e8;
-    text-decoration: none;
+  main {
+    background-color: #FAF8F5;
+    color: #333333;
+    padding: 5px;
   }
 
-  .nav-links a:hover {
-    text-decoration: underline;
+  .home {
+    padding-top: 6vh;
+    padding-bottom: 5px;
+    display: flex;            
+    flex-direction: column; 
+    align-items: flex-start;  
+    margin: 0 auto;           
+    max-width: 800px;
+    width: 100%;          
+    height: auto;
   }
 
-}
-
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;  /* Empilha os itens */
-    justify-content: center; /* Alinha no centro */
-    align-items: start;
-   
+  .filtro {
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid gray;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  
+  .filtro span {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .card {
+    width: 100%; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    background-color: #FAF8F5;
   }
 
-  .navbar .logo img {
-    max-width: 150px; /* Ajusta o tamanho da logo */
-    margin-right: 0;  /* Remove margem excessiva */
+  .post {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2vh; 
   }
-}
-
-
-/* Responsividade com media queries */
-@media (max-width: 768px) { 
-  html {
-    font-size: 15px; 
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
-  p {
-    font-size: 0.95rem; 
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 14px; 
-  }
-  h1 {
-    font-size: 1.6rem; 
-  }
-  h2 {
-    font-size: 1.4rem; 
-  }
-  p {
-    font-size: 0.9rem; 
-  }
-}
-
-@media (max-width: 480px) {
-  .home, .card {
-    max-width: 100%; /* Remove a limitação de largura */
-    margin: 10px;    /* Ajuste a margem para compensar */
-  }
-}
-
-
-@media (max-width: 480px) {
-  #searchInput {
+  
+  .post-header {
+    display: flex;
+    flex-direction: column; 
     width: 100%;
   }
-
-  #searchInput.expanded {
-    width: 100%;
+  
+  .post-header img {
+    border-radius: 2vh;
+    max-width: 600px; 
+    max-height: 300px;
+    object-fit: cover; 
   }
+
+  .post-text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .post-text p {
+    font-size: 16px; 
+  }
+
+  .post-text span {
+    border-radius: 5%;
+    padding: 5px 10px;
+    background-color: #1212;
+    color: black;
+  }
+
 }
 

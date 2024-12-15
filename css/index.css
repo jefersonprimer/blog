@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* global */
-/* font family */
 html {
   font-size: 16px; 
 }
@@ -35,16 +33,16 @@ p {
 
 body, html {
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* header style */
 header {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #2F2F2F;
-  padding: 10px 20px;/* padding: 0px 60px; */
+  padding: 10px 20px;
 }
 
 .navbar {
@@ -125,6 +123,7 @@ main {
 
 .home {
   padding-top: 6vh;
+  padding-bottom: 6vh;
   display: flex;            
   flex-direction: column; 
   align-items: flex-start;  
@@ -202,7 +201,7 @@ main {
 }
 
 
-/* Structure of container */
+/* Structure of post container */
 a {
   color: inherit;
   text-decoration: none;
@@ -213,8 +212,8 @@ a {
   max-width: 800px; 
   margin: 20px auto; 
   border: none;
-  border-bottom: 1px solid #D1D1D1;
   background-color: #FAF8F5;
+  margin-bottom: 50px;
 }
 
 .card:hover {
@@ -224,7 +223,6 @@ a {
   transform: scale(1.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .post {
   display: flex;
@@ -242,13 +240,14 @@ a {
 
 .post-header img {
   border-radius: 2vh;
-  max-width: 30vh; 
+  width: 400px;
   object-fit: cover; 
 }
 
 .post-text {
   flex-grow: 1; 
   padding: 10px;
+  border-bottom: 1px solid #D1D1D1;
 }
 
 .post-text h1 {
@@ -314,53 +313,6 @@ a {
 #searchInput.expanded {
   width: 400px; 
 }
-
-#helpButton {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.message {
-  display: none;
-  margin-top: 10px;
-  color: #888;
-  font-size: 14px;
-}
-
-.suggestions-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  display: none; 
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.suggestions-list li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.suggestions-list li:hover {
-  background-color: #f0f0f0;
-}
-
-.suggestions-list.active {
-  display: block; 
-}
-
 
 footer {
   background-color: #2F2F2F; /* Fundo escuro */

@@ -21,15 +21,22 @@
   <body>
     <!--  -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark ms-5 me-5">
+      <div class="navbar">
         <div class="logo">
-          <a href="/index.html"
-            ><img src="/images_home/logo.png" alt="Logo do Blog"
-          /></a>
+          <a href="/index.html"><img src="/images_home/logo.png" alt="Logo Primerdev" /></a>
         </div>
-        <!-- -->
 
-        <!-- Button Hamburguer -->
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Pesquisar um post..."
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- hamburger -->
         <button
           class="navbar-toggler"
           type="button"
@@ -40,39 +47,13 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="search-bar">
-          <!-- <i class="bi bi-search"></i> -->
-          <input
-            type="text"
-            id="search-input"
-            class="form-control"
-            placeholder="Pesquisar um post..."
-          />
+
+        <div class="nav-links">
+          <a href="https://www.linkedin.com/in/jeferson-primer/" target="_blank" class="nav-link">Linkedin</a>
+            <a href="https://github.com/jefersonprimer" target="_blank" class="nav-link">Github</a>
+            <a href="https://jefersonprimer.github.io" target="_blank" class="nav-link">Portfólio</a>
         </div>
-        <!-- Links navbar -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="nav-links ms-auto">
-            <a
-              href="https://www.linkedin.com/in/jeferson-primer/"
-              target="_blank"
-              class="nav-link"
-              >Linkedin</a
-            >
-            <a
-              href="https://github.com/jefersonprimer"
-              target="_blank"
-              class="nav-link"
-              >Github</a
-            >
-            <a
-              href="https://jefersonprimer.github.io"
-              target="_blank"
-              class="nav-link"
-              >Portfólio</a
-            >
-          </div>
-        </div>
-      </nav>
+      </div>
     </header>
 
     <main id="post-main">
@@ -169,7 +150,7 @@
                         <p>Antes de começar, certifique-se de ter o Java JDK (versão 8 ou superior) e uma IDE como IntelliJ IDEA ou Eclipse instalados em seu ambiente de desenvolvimento.</p>
                 
                         <h3>Criando um Projeto com Spring Initializer</h3>
-                        <img src="/images_details/spring.webp" alt="cover spring" id="image-spring">
+                        <img src="/images_details/spring.webp" alt="cover spring">
                         <p><strong>Spring Initializr</strong> é uma ferramenta online que facilita a criação de novos projetos Spring Boot. Para iniciar:</p>
                         <ol>
                             <li>Acesse o Spring Initializr.</li>
@@ -335,12 +316,12 @@
 
                         <h3>Como o Event Loop Funciona?</h3>
                         <p>O Event Loop começa verificando a Pilha de Chamadas. Se a pilha estiver vazia, ele verifica a Task Queue. Se houver tarefas na fila, ele pega a primeira e a adiciona à Pilha de Chamadas para execução. Esse processo continua indefinidamente, garantindo que o código assíncrono seja executado na ordem correta, sem bloquear a execução do código síncrono.</p>
-                        <img src="images_details/single-thread-js.webp" alt="cover spring" id="image-spring">
+                        <img src="/images_details/single-thread-js.webp" alt="cover spring">
 
                         <h2>A Pilha de Chamadas (Call Stack)</h2>
                         <h3>Entendendo a Call Stack</h3>
                         <p>A Pilha de Chamadas é uma estrutura de dados que registra onde no código estamos. Quando uma função é chamada, ela é adicionada ao topo da pilha. Quando a função termina, ela é removida da pilha, e o controle retorna à função anterior.</p>
-                        <img src="/images_details/call-stack.webp" alt="cover spring" id="image-spring">
+                        <img src="/images_details/call-stack.webp" alt="cover spring">
 
                         <h3>Como o JavaScript Executa Funções na Pilha de Chamadas</h3>
                         <p>Cada vez que o JavaScript executa uma função, ela a adiciona à Call Stack. Se essa função chamar outra função, esta também será adicionada à pilha. Esse processo continua até que a última função seja executada e removida da pilha.</p>
@@ -517,7 +498,6 @@
     <script src="js/search.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/filtro.js"></script>
-    <script src="js/searchSuggestion.js"></script>
     <!--  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
