@@ -23,7 +23,7 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <a href="../index.html"><img src="../images_home/logo.png" alt="Logo Primerdev" /></a>
+          <a href="/"><img src="../images_home/logo.png" alt="Logo Primerdev" /></a>
         </div>
 
         <div class="search-bar">
@@ -560,7 +560,172 @@
             </main>
 
           `;
-        }else {
+        } else if (postId === "5") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="index.html">Home</a> /
+                  <a href="#">Tecnologia</a> /
+                  <a href="#">Frontend</a> /
+                  Escrevendo seu primeiro teste para sua aplicação Create-React-App utilizando Jest e Testing Library
+                  <hr>
+                </p>
+
+                <h1>Escrevendo seu primeiro teste para sua aplicação Create-React-App utilizando Jest e Testing Library</h1>
+                <div class="meu-perfil">
+                  <a href="https://github.com/jefersonprimer">
+                    <div class="meu-perfil">
+                      <img src="../images_home/profile.jpg" alt="Foto de perfil" />
+                      <div class="perfil-info">
+                        <h1>Fernanda Kipper</h1>
+                        <p>Engenheira de Software no Itaú</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <div class="container content">
+                  <article>
+                    <h2>Introdução</h2>
+                    <p>
+                      Quantas vezes você não criou sua aplicação React utilizando create-react-app e se deparou com um script de teste em seu?
+                    </p>
+                    <pre>
+            <code>
+            "scripts": {
+              "start": "react-scripts start",
+              "build": "react-scripts build",
+              "test": "react-scripts test",
+              "eject": "react-scripts eject"
+            }
+            </code>
+                    </pre>
+                    <p>
+                      Por padrão, o create-react-app utiliza o Jest como seu test runner. O Jest é um runner baseado em Node.js, ou seja, roda os testes em um ambiente Node e não em um navegador real. Ele fornece atributos similares aos de um navegador real, como o objeto window, além de trazer bibliotecas úteis como:
+                    </p>
+                    <ul>
+                      <li><strong>@testing-library/react:</strong> para testar componentes React.</li>
+                      <li><strong>@testing-library/jest-dom:</strong> para interagir com a DOM montada pelo Jest.</li>
+                    </ul>
+
+                    <h2>Organização dos arquivos</h2>
+                    <p>
+                      O Jest executa arquivos de teste terminados em:
+                    </p>
+                    <ul>
+                      <li><code>.spec.js/.ts</code></li>
+                      <li><code>.test.js/.ts</code></li>
+                    </ul>
+                    <p>
+                      Ou localizados na pasta <code>__tests__</code>. Por convenção, recomenda-se estruturar os testes da mesma forma que o projeto, agrupando-os por componentes, páginas ou hooks.
+                    </p>
+
+                    <h2>Criando nosso componente</h2>
+                    <p>
+                      Vamos testar um botão simples que exibe uma mensagem ao ser pressionado:
+                    </p>
+                    <pre>
+            <code>
+            export function MessageButton() {
+              const [showMessage, setShowMessage] = useState(false);
+
+              return (
+                <>
+                  {showMessage ? <h1 data-testid="message">Botão foi acionado!</h1> : null}
+                  <button
+                    onClick={() => setShowMessage(!showMessage)}
+                    data-testid="button"
+                  >
+                    Clique em mim!
+                  </button>
+                </>
+              );
+            }
+            </code>
+                    </pre>
+
+                    <h2>Criando nosso teste</h2>
+                    <p>
+                      Vamos configurar o Jest para dois testes principais:
+                    </p>
+                    <ol>
+                      <li>Verificar se o botão renderiza corretamente em tela.</li>
+                      <li>Verificar se a mensagem aparece ao pressionar o botão.</li>
+                    </ol>
+                    <pre>
+            <code>
+            import { MessageButton } from '../components/MessageButton';
+
+            describe('Testando o botão de exibição de mensagem', () => {
+              it('deve renderizar em tela', () => {
+                // Teste para renderização
+              });
+
+              it('deve mostrar a mensagem ao ser pressionado', () => {
+                // Teste de ação do botão
+              });
+            });
+            </code>
+                    </pre>
+
+                    <h2>Teste: renderizar em tela</h2>
+                    <p>
+                      Para verificar se o botão está renderizado, usaremos <code>render</code> e <code>screen</code> da Testing Library:
+                    </p>
+                    <pre>
+            <code>
+            import { MessageButton } from '../components/MessageButton';
+            import { render, screen } from '@testing-library/react';
+
+            describe('Testando o botão de exibição de mensagem', () => {
+              it('deve renderizar em tela', () => {
+                render(<MessageButton />);
+                const button = screen.getByTestId('button');
+                expect(button).toBeInTheDocument();
+              });
+            });
+            </code>
+                    </pre>
+
+                    <h2>Teste: acionar ação de clique</h2>
+                    <p>
+                      Usaremos <code>fireEvent</code> para simular o clique:
+                    </p>
+                    <pre>
+            <code>
+            import { MessageButton } from '../components/MessageButton';
+            import { render, screen, fireEvent } from '@testing-library/react';
+
+            describe('Testando o botão de exibição de mensagem', () => {
+              it('deve mostrar a mensagem ao ser pressionado', () => {
+                render(<MessageButton />);
+                const button = screen.getByTestId('button');
+                fireEvent.click(button);
+                const message = screen.getByTestId('message');
+                expect(message).toBeInTheDocument();
+              });
+            });
+            </code>
+                    </pre>
+
+                    <h2>Conclusão</h2>
+                    <p>
+                      O Jest, combinado com o create-react-app e a Testing Library, torna o teste de componentes React simples e eficiente. Experimente rodar os testes com <code>npm run test</code> e veja os resultados!
+                    </p>
+                    <p>
+                      Espero que este artigo tenha ajudado a esclarecer os fundamentos do Jest e Testing Library. Qualquer dúvida, fique à vontade para perguntar!
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+          `;
+        } else {
           postContent = `
             <div class="post-detalhes">
               <h1>Post Não Encontrado</h1>

@@ -1,35 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html {
-  font-size: 16px; 
+html h1 {
+  font-size: 20px !important;
+}
+
+html p {
+  font-size: 15px !important;
 }
 
 body {
-  font-size: 1rem; 
   font-family: 'Roboto', sans-serif;
 }
-
-h1 {
-  font-size: 2rem; 
-}
-h2 {
-  font-size: 1.75rem; 
-}
-p {
-  font-size: 1rem; 
-  line-height: 1.6; 
-}
-
-h1 {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem); 
-}
-h2 {
-  font-size: clamp(1.6rem, 2vw, 2.2rem); 
-}
-p {
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem); 
-}
-
 
 body, html {
   overflow-x: hidden;
@@ -140,6 +121,12 @@ main {
 
 .home h1 {
   font-weight: bold; 
+  padding-bottom: 10px;
+  font-size: 50px!important;
+}
+
+.home p {
+  font-size: 20px!important;
 }
 
 /* Overlay nav */
@@ -193,6 +180,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 .filtro span {
@@ -213,7 +201,7 @@ a {
 
 .card {
   width: 100%; 
-  max-width: 800px; 
+  max-width: 900px; 
   margin: 20px auto; 
   border: none;
   background-color: #FAF8F5;
@@ -231,21 +219,36 @@ a {
 /* colocar no mobile a parte de baixo*/
 .card .post-header {
   display: flex; /* Alinha elementos horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  align-items: flex-start; /* Faz o conteúdo começar do topo */
+  position: relative; /* Necessário para usar position absolute no texto */
 }
 
 .card .post-header img {
-  width: 200px; /* Defina a largura fixa desejada */
-  height: 200px; /* Defina a altura fixa desejada */
+  width: 250px; /* Defina a largura fixa desejada */
+  height: 250px; /* Defina a altura fixa desejada */
   object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
   border-radius: 8px; /* Opcional: para bordas arredondadas */
   border: 1px solid gray;
+  margin-right: 20px; /* Adiciona um espaçamento entre a imagem e o texto */
 }
 
 .card .post-header .post-text {
-  flex: 1; /* Permite que o texto ocupe o restante do espaço disponível */
-  
+  display: flex;
+  flex-direction: column; /* Organiza o texto em coluna */
+  justify-content: flex-start; /* Alinha o texto ao topo */
+  position: relative; /* Agora o texto vai ficar ao lado da imagem */
+  padding: 10px; /* Espaçamento do texto */
+  background-color: rgba(255, 255, 255, 0.7); /* Fundo semitransparente, para não esconder a imagem */
+  border-radius: 8px; /* Bordas arredondadas, caso desejado */
 }
+
+.card .post-header .post-text h1 {
+  margin-bottom: 10px;
+  font-size: 18px; /* Ajuste o tamanho do título conforme necessário */
+}
+
+
+
 
 /* colocar no mobile a parte de cima*/
 
@@ -275,12 +278,7 @@ a {
 }
 
 .post-text h1 {
-  font-size: 24px;
   margin-bottom: 10px;
-}
-
-.post-text p {
-  font-size: 16px; 
 }
 
 .post-text span {
@@ -296,11 +294,25 @@ a {
   justify-content: center; 
   align-items: center; 
   gap: 10px; 
-  margin-top: 10px;
+  position: relative;
+  top: -10px; /* Ajuste para telas grandes */
 }
 
+@media (max-width: 768px) {
+  .meu-perfil {
+    top: -10px; /* Ajuste para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .meu-perfil {
+    top: 0; /* Para dispositivos muito pequenos, você pode até remover o deslocamento */
+  }
+}
+
+
 .meu-perfil img {
-  max-width: 50px; 
+  max-width: 45px; 
   border-radius: 50%; 
   margin-bottom: 15px;
 }
@@ -312,14 +324,14 @@ a {
 }
 
 .perfil-info h1 {
-  font-size: 15px; 
+  font-size: 15px!important; 
   margin: 0
 }
 
 .perfil-info p {
+  margin-top: 2px;
   font-size: 14px; 
   color: #777; 
-  margin-top: 5px;
 }
 
 /* Estilos para o campo de pesquisa */
