@@ -123,7 +123,6 @@
     align-items: center;
     flex-direction: row;
     border-bottom: 1px solid gray;
-    border-radius: 5px;
     gap: 5px;
   }
   
