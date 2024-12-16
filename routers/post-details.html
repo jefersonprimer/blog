@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
 
-    <title>Primeiros Passos no Spring Boot | Jeferson Primer | Dev</title>
+    <title>Blog | Jeferson Primer | Dev</title>
     <link rel="stylesheet" href="/css/post-details.css" />
     <link rel="stylesheet" href="/css/post-details-mobile.css" />
   </head>
@@ -105,18 +105,20 @@
 
         // Variável para armazenar o conteúdo dinâmico do post
         let postContent = "";
+        let postTitle = ""; // Variável para armazenar o título do post
 
         // Lógica para gerar o conteúdo baseado no postId
         if (postId === "1") {
+          postTitle = "Primeiros Passos no Spring Boot";
           postContent = `
-            <main class="container mt-5">
+            <main class="container">
               <div class="post-detalhes">
                 <p class="product-path">
-                  <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Java</a> / <a href="#">Spring</a> / Primeiros Passos no Spring Boot
+                  <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Java</a> / <a href="#">Spring</a> / ${postTitle}
                 <hr>
                 </p>
 
-                <h1>Primeiros Passos no Spring Boot</h1>
+                <h1>${postTitle}</h1>
                 <div class="meu-perfil">
                   <a href="https://jefersonprimer.github.com">
                     <div class="meu-perfil">
@@ -277,8 +279,9 @@
             </main>
             `;
         } else if (postId === "2") {
+          postTitle = "Guia Iniciante sobre o Single Thread e Event Loop em JavaScript";
           postContent = `
-            <main class="container mt-5">
+            <main class="container">
               <div class="post-detalhes">
                 <p class="product-path">
                   <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">JavaScript</a> / <a href="#">Event Loop</a> / Guia Iniciante sobre o Single Thread e Event Loop em JavaScript
@@ -410,7 +413,7 @@
             `;
         } else if (postId === "3") {
           postContent = `
-            <main class="container mt-5">
+            <main class="container">
               <div class="post-detalhes">
                 <p class="product-path">
                   <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Cloud Computing</a> / <a href="#">Segurança na Nuvem</a> / 3 Formas de Aumentar a Segurança na Nuvem
@@ -457,7 +460,107 @@
             </main>
 
             `;
-        } else {
+        } else if (postId === "4") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="index.html">Home</a> / 
+                  <a href="#">Tecnologia</a> / 
+                  <a href="#">Desenvolvimento Front-End</a> / 
+                  Como o React JS funciona?
+                  <hr>
+                </p>
+
+                <h1>Como o React JS funciona?</h1>
+                <div class="meu-perfil">
+                  <a href="https://github.com/jefersonprimer">
+                    <div class="meu-perfil">
+                      <img src="/images_home/profile.jpg" alt="Foto de perfil" />
+                      <div class="perfil-info">
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <div class="container content">
+                  <article>
+                    <h2>Introdução</h2>
+                    <p>
+                      Uma dúvida muito comum entre nós desenvolvedores é como os frameworks que utilizamos no 
+                      nosso dia a dia funcionam por baixo dos panos e nos ajudam na construção de aplicações. 
+                      Foi uma dúvida como essa a respeito de React que me levou a uma pesquisa para entender 
+                      um pouquinho mais a fundo o funcionamento dessa tão poderosa ferramenta, e quero 
+                      compartilhar esse conhecimento com você!
+                    </p>
+                    <p>
+                      <strong>OBS:</strong> Nesse artigo, vou abordar exclusivamente o funcionamento de React JS. 
+                      Futuramente, posso escrever outro post para explicar sobre React Native.
+                    </p>
+
+                    <h2>O que é o React?</h2>
+                    <p>
+                      React JS é uma biblioteca JavaScript para a construção de interfaces de usuário. Ele permite que 
+                      os desenvolvedores criem aplicações de forma eficiente, com reutilização de componentes, 
+                      manipulação dinâmica da DOM e suporte para projetos complexos. Essa abordagem economiza tempo e 
+                      evita a necessidade de "reinventar a roda".
+                    </p>
+
+                    <h2>Como funciona o React JS?</h2>
+                    <h3>1. O HTML</h3>
+                    <p>
+                      Em aplicações React, temos um único arquivo HTML, geralmente chamado de <code>index.html</code>, que contém uma 
+                      <code>div</code> com o <code>id="root"</code>. O React utiliza essa <code>div</code> como o ponto de 
+                      injeção para toda a interface, mantendo o conceito de Single Page Application (SPA).
+                    </p>
+                    <img src="/images_details/vscode3.webp" alt="cover spring">
+
+                    <h3>2. O JavaScript</h3>
+                    <p>
+                      O arquivo de entrada da aplicação (normalmente chamado <code>index.jsx</code>) é responsável por 
+                      renderizar os componentes React na <code>div</code> principal. Um exemplo básico seria:
+                    </p>
+                    <pre>
+            <code>
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import './index.css';
+            import App from './App';
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+            </code>
+                    </pre>
+
+                    <h3>3. Webpack e Babel</h3>
+                    <p>
+                      O Webpack organiza e empacota todos os arquivos da aplicação (HTML, CSS, JS, etc.) em um único 
+                      bundle, enquanto o Babel transpila o código moderno em JavaScript compatível com todos os 
+                      navegadores. Essas ferramentas são configuradas automaticamente pelo <code>create-react-app</code>.
+                    </p>
+
+                    <h2>Conclusão</h2>
+                    <p>
+                      O React JS é uma poderosa ferramenta para construção de interfaces modernas e dinâmicas. Ele utiliza 
+                      uma combinação eficiente de HTML, JavaScript e ferramentas como Webpack e Babel para garantir 
+                      performance e flexibilidade.
+                    </p>
+                    <p>
+                      Espero que este artigo tenha ajudado a esclarecer os fundamentos do React JS e motivado sua curiosidade 
+                      para explorar mais essa biblioteca incrível!
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+
+          `;
+        }else {
           postContent = `
             <div class="post-detalhes">
               <h1>Post Não Encontrado</h1>

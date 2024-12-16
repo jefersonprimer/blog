@@ -100,7 +100,8 @@
   }
 
   .home {
-    padding-top: 6vh;
+    text-align: justify;
+    padding-top: 5vh;
     padding-bottom: 5px;
     display: flex;            
     flex-direction: column; 
@@ -111,7 +112,12 @@
     height: auto;
   }
 
+  .home h1 {
+    font-weight: bold; 
+  }
+
   .filtro {
+    margin-top: 10px;
     padding: 5px 5px;
     display: flex;
     align-items: center;
@@ -129,11 +135,33 @@
   .card {
     width: 100%; 
     max-width: 400px; 
-    margin: 20px auto; 
+    margin: 50px auto; 
     border: none;
     border-bottom: 1px solid #D1D1D1;
     background-color: #FAF8F5;
   }
+
+  /*111111111111111111111111111111111111*/
+/* colocar no mobile a parte de baixo*/
+.card .post-header {
+  display: flex; /* Alinha elementos horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.card .post-header img {
+  width: 100%; /* Defina a largura fixa desejada */
+  height: 200px; /* Defina a altura fixa desejada */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: 8px; /* Opcional: para bordas arredondadas */
+  border: 1px solid gray;
+}
+
+.card .post-header .post-text {
+  flex: 1; /* Permite que o texto ocupe o restante do espaço disponível */
+  
+}
+
+/* colocar no mobile a parte de cima*/
 
   .post {
     display: flex;
@@ -150,8 +178,8 @@
   
   .post-header img {
     border-radius: 2vh;
-    max-width: 600px; 
-    max-height: 300px;
+    /* max-width: 800px; 
+    max-height: 800px; */
     object-fit: cover; 
   }
 
