@@ -1,3 +1,5 @@
+document.querySelector('.items').style.display = 'none'; // Esconde a lista
+
 // Seleciona o input de busca e outros elementos
 const searchInput = document.getElementById('search');
 const inputGroup = document.querySelector('.input-group');
@@ -51,6 +53,7 @@ searchInput.addEventListener('input', (event) => {
                 hasResults = true; // Indica que há resultados
             } else {
                 item.style.display = 'none'; // Oculta o item
+                document.querySelector('.items').style.display = 'none';
             }
         });
 
@@ -61,7 +64,6 @@ searchInput.addEventListener('input', (event) => {
         // Se o input estiver vazio, oculta todos os itens e a mensagem de "nenhum resultado"
         items.forEach(item => item.style.display = 'none');
         noResults.style.display = 'none'; // Oculta a mensagem "nenhum resultado"
-        document.querySelector('.items').style.display = 'none'; // Esconde a lista
     }
 });
 
@@ -72,4 +74,30 @@ function formatString(value) {
         .toLowerCase() // Transforma em lowercase
         .normalize('NFD') // Normaliza para separar os acentos
         .replace(/[\u0300-\u036f]/g, ''); // Remove os acentos
+}
+
+
+// localStorage
+// Armazenar as pesquisas no localStorage (se a pesquisa for relevante)
+const recentSearches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+
+searchInput.addEventListener('input', (event) => {
+    const value = formatString(event.target.value);
+
+    if (value.length >= 3) {
+        // Salvar as pesquisas no localStorage
+        if (!recentSearches.includes(value)) {
+            recentSearches.push(value);
+            localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
+        }
+
+        // Mostrar os itens relevantes ou sugestões do histórico
+        displaySuggestions(value);
+    }
+});
+
+function displaySuggestions(query) {
+    // Exibe sugestões relevantes baseadas no histórico ou pesquisa atual
+    // Exemplo de implementação de sugestões personalizadas (baseadas em valores passados)
+    // ... Sua lógica aqui para exibir itens de histórico ou novos itens com base na pesquisa.
 }
