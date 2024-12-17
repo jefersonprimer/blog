@@ -290,7 +290,7 @@
             <main class="container">
               <div class="post-detalhes">
                 <p class="product-path">
-                  <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">JavaScript</a> / <a href="#">Event Loop</a> / Guia Iniciante sobre...
+                  <i class="fas fa-chevron-right"></i> <a href="../index.html">Home</a> / <a href="#">JavaScript</a> / <a href="#">Event Loop</a> / Guia Iniciante sobre...
                   <hr>
                 </p>
 
@@ -422,7 +422,7 @@
             <main class="container">
               <div class="post-detalhes">
                 <p class="product-path">
-                  <i class="fas fa-chevron-right"></i> <a href="index.html">Home</a> / <a href="#">Cloud Computing</a> / <a href="#">Segurança na Nuvem</a> / 3...
+                  <i class="fas fa-chevron-right"></i> <a href="../index.html">Home</a> / <a href="#">Cloud Computing</a> / <a href="#">Segurança na Nuvem</a> / 3...
                   <hr>
                 </p>
 
@@ -472,7 +472,7 @@
               <div class="post-detalhes">
                 <p class="product-path">
                   <i class="fas fa-chevron-right"></i>
-                  <a href="index.html">Home</a> / 
+                  <a href="../index.html"">Home</a> / 
                   <a href="#">Tecnologia</a> / 
                   <a href="#">Frontend</a> / 
                   Como o React JS...
@@ -519,13 +519,14 @@
                     </p>
 
                     <h2>Como funciona o React JS?</h2>
+                    
                     <h3>1. O HTML</h3>
                     <p>
                       Em aplicações React, temos um único arquivo HTML, geralmente chamado de <code>index.html</code>, que contém uma 
                       <code>div</code> com o <code>id="root"</code>. O React utiliza essa <code>div</code> como o ponto de 
                       injeção para toda a interface, mantendo o conceito de Single Page Application (SPA).
                     </p>
-                    <img src="../images_details/vscode3.webp" alt="cover spring">
+                    <img src="../images_details/vscode3.webp" alt="Imagem do Visual Studio Code mostrando código React">
 
                     <h3>2. O JavaScript</h3>
                     <p>
@@ -572,7 +573,7 @@
               <div class="post-detalhes">
                 <p class="product-path">
                   <i class="fas fa-chevron-right"></i>
-                  <a href="index.html">Home</a> /
+                  <a href="../index.html">Home</a> /
                   <a href="#">Tecnologia</a> /
                   <a href="#">Frontend</a> /
                   Escrevendo seu primeiro teste para sua aplicação Create-React-App utilizando Jest e Testing Library
@@ -585,8 +586,8 @@
                     <div class="meu-perfil">
                       <img src="../images_home/profile.jpg" alt="Foto de perfil" />
                       <div class="perfil-info">
-                        <h1>Fernanda Kipper</h1>
-                        <p>Engenheira de Software no Itaú</p>
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
                       </div>
                     </div>
                   </a>
@@ -731,7 +732,654 @@
               </div>
             </main>
           `;
-        } else {
+        }else if (postId === "6") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="../index.html">Home</a> /
+                  <a href="#">Dicas</a> /
+                  <a href="#">Frontend</a> /
+                  3 Dicas para Devs...
+                </p>
+                <hr>
+
+                <h1>3 Dicas para Devs melhorarem a implementação com HTML e CSS das interfaces criadas em ferramentas como o Figma</h1>
+
+                <div class="meu-perfil">
+                  <a href="#">
+                    <div class="meu-perfil">
+                      <img src="../images_home/profile.jpg" alt="Foto de perfil" />
+                      <div class="perfil-info">
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <div class="container content">
+                  <article>
+                    <h2>Introdução</h2>
+                    <p>
+                      Em algum momento na sua trajetória de desenvolvedor web, você irá se deparar com interfaces gráficas lindas criadas no Figma. Neste artigo, compartilho 3 dicas essenciais para melhorar a implementação dessas interfaces com HTML e CSS.
+                    </p>
+
+                    <h2>O que é o Figma?</h2>
+                    <p>
+                      O Figma é uma ferramenta popular entre designers de UX/UI, acessível via navegador, que permite a criação colaborativa de interfaces.
+                    </p>
+
+                    <h2>1. Escolhendo as Tags HTML</h2>
+                    <p>
+                      Utilize HTML Semântico para facilitar a manutenção e a compreensão do conteúdo da página. A seguir, veja exemplos de tags comuns:
+                    </p>
+                    <ul>
+                      <li><strong>&lt;header&gt;</strong>: Cabeçalho da aplicação com títulos, logos e links.</li>
+                      <li><strong>&lt;main&gt;</strong>: Conteúdo principal da página.</li>
+                      <li><strong>&lt;h1&gt;</strong>: Título principal, usado apenas uma vez na página.</li>
+                      <li><strong>&lt;h2&gt;</strong>: Subtítulos para seções ou menus.</li>
+                      <li><strong>&lt;div&gt;</strong>: Container para agrupar elementos.</li>
+                    </ul>
+                    <p>
+                      Exemplos práticos:
+                    </p>
+                    <pre>
+            <code>
+            <header>
+              <nav>
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+              </nav>
+            </header>
+            <main>
+              <h1>Work at the speed of thought</h1>
+              <div>
+                <button>Try for free</button>
+                <button>Learn more</button>
+              </div>
+            </main>
+            </code>
+                    </pre>
+
+                    <h2>2. Definindo o tamanho dos elementos eficientemente</h2>
+                    <p>
+                      Adote uma medida padrão no CSS utilizando o <strong>:root</strong> e a unidade <code>rem</code> para tamanhos relativos.
+                    </p>
+                    <pre>
+            <code>
+            :root {
+              font-size: 20px;
+            }
+
+            @media (min-width: 900px) {
+              :root {
+                font-size: 22px;
+              }
+            }
+
+            @media (min-width: 1200px) {
+              :root {
+                font-size: 24px;
+              }
+            }
+            </code>
+                    </pre>
+                    <p>
+                      Comparando tamanhos no Figma:
+                    </p>
+                    <ul>
+                      <li>52px = 2.6rem (52 / 20)</li>
+                      <li>148px = 7.4rem</li>
+                    </ul>
+
+                    <h2>3. Criando variáveis para a paleta de cores</h2>
+                    <p>
+                      Para evitar a repetição de código e facilitar manutenção, declare variáveis no CSS para a paleta de cores.
+                    </p>
+                    <pre>
+            <code>
+            :root {
+              --mainBackground: #f0f0f0;
+              --textColor: #252529;
+              --titleColor: #6b6bff;
+            }
+
+            h1 {
+              color: var(--titleColor);
+            }
+            </code>
+                    </pre>
+
+                    <h2>Conclusão</h2>
+                    <p>
+                      Seguindo essas dicas, a implementação de interfaces gráficas do Figma ficará mais organizada, eficiente e de fácil manutenção. Espero que este artigo tenha ajudado! 😁
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+
+          `;
+        }else if (postId === "7") {
+          postContent = `
+           <main class="container">
+            <div class="post-detalhes">
+              <p class="product-path">
+                <i class="fas fa-chevron-right"></i>
+                <a href="../index.html">Home</a> /
+                <a href="#">Dicas</a> /
+                <a href="#">Frontend</a> /
+                Dark Mode em React — Utilizando Contextos
+              </p>
+              <hr>
+
+              <h1>Dark Mode em React — Utilizando Contextos</h1>
+
+              <div class="meu-perfil">
+                <a href="#">
+                  <div class="meu-perfil">
+                    <img src="../images_home/profile.jpg" alt="Foto de perfil" />
+                    <div class="perfil-info">
+                      <h1>Jeferson Primer</h1>
+                      <p>Engenheiro de Software</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <hr>
+
+              <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+              <div class="container content">
+                <article>
+                  <h2>Por que usar Contextos?</h2>
+                  <p>
+                    Contextos em React fornecem uma forma eficiente de compartilhar dados entre componentes sem precisar passar <strong>props</strong> manualmente em cada nível da árvore de componentes.
+                  </p>
+                  <p>
+                    Em uma aplicação com suporte ao <strong>Dark Mode</strong>, vários componentes precisam saber se o modo escuro está ativado. O <strong>Context API</strong> resolve esse problema de forma centralizada e eficiente.
+                  </p>
+
+                  <h2>Criando o Contexto</h2>
+                  <p>Crie uma pasta chamada <code>contexts</code> e adicione um arquivo chamado <code>DarkThemeContext.js</code>:</p>
+                  <pre><code>
+          import { createContext } from 'react';
+
+          const DarkThemeContext = createContext({
+            isDark: false,
+            setDarkTheme: () => {},
+          });
+
+          export default DarkThemeContext;
+                  </code></pre>
+                  <p>
+                    Aqui, criamos um contexto com os valores padrão <code>isDark</code> e <code>setDarkTheme</code>.
+                  </p>
+
+                  <h2>Configurando o Provider</h2>
+                  <p>
+                    No componente principal (exemplo: <code>App.js</code>), configuramos o <strong>Provider</strong> do contexto:
+                  </p>
+                  <pre><code>
+          import React, { useState, useEffect } from 'react';
+          import DarkThemeContext from './contexts/DarkThemeContext';
+          import LandingPage from './pages/Landing';
+
+          function App() {
+            const [isDark, setDarkTheme] = useState(false);
+
+            useEffect(() => {
+              setDarkTheme(JSON.parse(localStorage.getItem('darkTheme')) || false);
+            }, []);
+
+            return (
+              &lt;DarkThemeContext.Provider value={{ isDark, setDarkTheme }}&gt;
+                &lt;LandingPage /&gt;
+              &lt;/DarkThemeContext.Provider&gt;
+            );
+          }
+
+          export default App;
+                  </code></pre>
+                  <p>
+                    Aqui, usamos <code>useState</code> para gerenciar o estado do tema e inicializamos o valor com o que está salvo no <strong>LocalStorage</strong>.
+                  </p>
+
+                  <h2>Consumindo o Contexto</h2>
+                  <p>
+                    Para consumir o valor do contexto em um componente, utilizamos o <code>useContext</code>:
+                  </p>
+                  <pre><code>
+          import React, { useContext } from 'react';
+          import DarkThemeContext from './contexts/DarkThemeContext';
+
+          function LandingPage() {
+            const { isDark } = useContext(DarkThemeContext);
+
+            return (
+              &lt;div&gt;
+                {isDark ? (
+                  &lt;button className='Dark'&gt;Botão Modo Dark&lt;/button&gt;
+                ) : (
+                  &lt;button&gt;Botão Normal&lt;/button&gt;
+                )}
+              &lt;/div&gt;
+            );
+          }
+
+          export default LandingPage;
+                  </code></pre>
+                  <p>
+                    Neste exemplo, o valor de <code>isDark</code> determina se o botão exibirá a classe <code>Dark</code>.
+                  </p>
+
+                  <h2>Alterando o Tema e Salvando no LocalStorage</h2>
+                  <p>
+                    Agora, vamos adicionar um botão que altera o tema e salva a preferência do usuário no <strong>LocalStorage</strong>:
+                  </p>
+                  <pre><code>
+          import React, { useContext, useEffect } from 'react';
+          import DarkThemeContext from './contexts/DarkThemeContext';
+
+          function LandingPage() {
+            const { isDark, setDarkTheme } = useContext(DarkThemeContext);
+
+            function handleChangeTheme() {
+              setDarkTheme(!isDark);
+            }
+
+            useEffect(() => {
+              localStorage.setItem('darkTheme', JSON.stringify(isDark));
+            }, [isDark]);
+
+            return (
+              &lt;div&gt;
+                {isDark ? (
+                  &lt;button className='Dark' onClick={handleChangeTheme}&gt;
+                    Botão Modo Dark
+                  &lt;/button&gt;
+                ) : (
+                  &lt;button onClick={handleChangeTheme}&gt;Botão Normal&lt;/button&gt;
+                )}
+              &lt;/div&gt;
+            );
+          }
+
+          export default LandingPage;
+                  </code></pre>
+                  <p>
+                    A função <code>handleChangeTheme</code> alterna o valor de <code>isDark</code> e salva a nova configuração no <strong>LocalStorage</strong>. O efeito <code>useEffect</code> garante que a preferência do usuário seja persistida.
+                  </p>
+
+                  <h2>Conclusão</h2>
+                  <p>
+                    Utilizando o <strong>Context API</strong>, conseguimos implementar o <strong>Dark Mode</strong> de forma eficiente em uma aplicação React, garantindo que o estado do tema seja compartilhado por toda a árvore de componentes.
+                  </p>
+                  <p>Espero que tenha ajudado! 😊</p>
+                </article>
+              </div>
+            </div>
+          </main>
+
+          `;
+        }else if (postId === "8") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <!-- Caminho do Produto -->
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="../index.html">Home</a> /
+                  <a href="#">Dicas</a> /
+                  <a href="#">Frontend</a> /
+                  Windowing - Otimizando sua Aplicação React
+                </p>
+                <hr>
+
+                <!-- Título do Post -->
+                <h1>Windowing &mdash; Otimizando sua Aplicação React</h1>
+
+                <!-- Informacoes do Autor -->
+                <div class="meu-perfil">
+                  <a href="#">
+                    <div class="perfil-detalhes">
+                      <img src="../images_home/profile.jpg" alt="Foto de perfil de Fernanda Kipper" />
+                      <div class="perfil-info">
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <!-- Data do Artigo -->
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <!-- Conteúdo Principal -->
+                <div class="container content">
+                  <article>
+                    <!-- Introdução -->
+                    <h2>Introdução</h2>
+                    <p>
+                      Em algum momento da nossa trajetória já tivemos ou teremos que lidar com enormes listas de dados que precisam ser mostrados ao usuário. Quanto maior a lista, menor a performance da aplicação se não tratarmos isso corretamente. Aí que entra o conceito de <strong>Windowing</strong>...
+                    </p>
+
+                    <!-- O que é Windowing -->
+                    <h2>O que é Windowing?</h2>
+                    <p>
+                      Windowing é o ato de renderizar apenas os componentes visíveis em tela (viewport do usuário). Isso reduz o número de elementos renderizados simultaneamente, evitando a necessidade de renderizar a lista inteira antes de exibir qualquer elemento.
+                    </p>
+
+                    <!-- Exemplo de Windowing -->
+                    <h2>Exemplo de Windowing</h2>
+                    <h3>React-Window</h3>
+                    <p>
+                      O <strong>React-Window</strong> é uma pequena biblioteca que nos permite aplicar windowing na aplicação React, fornecendo componentes responsáveis pela renderização dinâmica.
+                    </p>
+
+                    <!-- Fixed-Size-List -->
+                    <h3>Fixed-Size-List</h3>
+                    <p>
+                      Vamos aprender a utilizar o componente <strong>FixedSizeList</strong>, ideal para listas com tamanho pré-definido. Primeiramente, criamos uma função para renderizar cada item da lista.
+                    </p>
+
+                    <pre>
+          <code>
+          const dataArray = [
+            /* lista com os dados */
+          ];
+          const rowRenderingFunction = ({ index, style }) => {
+            const element = dataArray[index];
+            return <div style={style}>{element}</div>;
+          };
+          </code>
+                    </pre>
+
+                    <p>
+                      Em seguida, configuramos o componente <strong>FixedSizeList</strong> passando os parâmetros essenciais:
+                    </p>
+
+                    <ul>
+                      <li><strong>Height:</strong> Altura da lista, pode ser um número fixo (ex: <code>150</code>).</li>
+                      <li><strong>Width:</strong> Comprimento da lista.</li>
+                      <li><strong>Layout:</strong> Direção da lista (<code>'vertical'</code> ou <code>'horizontal'</code>).</li>
+                      <li><strong>ItemSize:</strong> Tamanho dos itens.</li>
+                      <li><strong>ItemCount:</strong> Total de itens da lista (<code>dataArray.length</code>).</li>
+                    </ul>
+
+                    <p>Implementação final:</p>
+
+                    <pre>
+          <code>
+          import { FixedSizeList as List } from 'react-window';
+
+          const dataArray = [
+            /* lista com os dados */
+          ];
+
+          const rowRenderingFunction = ({ index, style }) => {
+            const element = dataArray[index];
+            return <div style={style}>{element}</div>;
+          };
+
+          function Page() {
+            return (
+              <List
+                height={150}
+                itemCount={dataArray.length}
+                itemSize={150}
+                width={300}
+                layout='vertical'
+              >
+                {rowRenderingFunction}
+              </List>
+            );
+          }
+
+          export default Page;
+          </code>
+                    </pre>
+
+                    <!-- Conclusão -->
+                    <h2>Conclusão</h2>
+                    <p>
+                      Com o React-Window, aplicamos o conceito de Windowing, melhorando a performance da aplicação React ao renderizar apenas os elementos visíveis. Espero ter ajudado! ☺️
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+          `;
+        }else if (postId === "9") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="../index.html">Home</a> /
+                  <a href="#">Dicas</a> /
+                  <a href="#">Backend</a> /
+                  Como configurar cookies em requisições CORS com Express e Axios
+                </p>
+                <hr>
+
+                <h1>Como configurar cookies em requisições CORS com Express e Axios</h1>
+
+                <div class="meu-perfil">
+                  <a href="#">
+                    <div class="meu-perfil">
+                      <img src="../images_home/profile.jpg" alt="Foto de perfil" />
+                      <div class="perfil-info">
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <div class="container content">
+                  <article>
+                    <h2>O que é uma requisição CORS?</h2>
+                    <p>
+                      CORS — Cross Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um sistema que utiliza headers adicionais ao tradicionais para determinar as permissões de uma aplicação ao acessar dados de um servidor de origem distinta.
+                    </p>
+                    <p>
+                      Um exemplo é quando seu frontend está hospedado em <code>http://a.com</code> e precisa acessar dados de uma API em <code>http://b.com</code>.
+                    </p>
+
+                    <h2>Por que utilizar os cookies?</h2>
+                    <p>
+                      Cookies são fragmentos de texto enviados pelo servidor e armazenados no navegador do usuário. Eles funcionam como credenciais de acesso e facilitam o gerenciamento de sessões de login.
+                    </p>
+
+                    <h2>Configurando o Backend com Express</h2>
+                    <p>Instale o pacote CORS:</p>
+                    <pre><code>npm install cors</code></pre>
+
+                    <p>Adicione as configurações no servidor:</p>
+                    <pre><code>
+            import express from 'express';
+            import cors from 'cors';
+
+            const server = express();
+            const corsOptions = {
+              credentials: true,
+              origin: 'http://a.com',
+            };
+            server.use(cors(corsOptions));
+            server.listen(process.env.PORT || 3200);
+                    </code></pre>
+
+                    <h3>Adicionando Cookies na Resposta</h3>
+                    <p>Defina um cookie no servidor com configurações específicas:</p>
+                    <pre><code>
+            return res.status(200)
+              .cookie('token', token, {
+                httpOnly: true,
+                maxAge: 30 * 60 * 1000,
+                sameSite: "none",
+                secure: true
+              })
+              .json({ mensagem: 'Logado com sucesso' });
+                    </code></pre>
+
+                    <h2>Configurando o Frontend com Axios</h2>
+                    <p>Instale o Axios:</p>
+                    <pre><code>npm install axios</code></pre>
+
+                    <p>Crie uma instância reutilizável do Axios:</p>
+                    <pre><code>
+            import Axios from 'axios';
+
+            const axios = Axios.create({
+              baseURL: 'http://b.com',
+              withCredentials: true,
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            });
+
+            export default axios;
+                    </code></pre>
+
+                    <h3>Fazendo Requisições</h3>
+                    <p>Utilize a instância configurada para realizar requisições:</p>
+                    <pre><code>
+            import axios from './Services/axiosConfig';
+
+            axios.get('/').then(res => console.log(res));
+                    </code></pre>
+
+                    <h2>Conclusão</h2>
+                    <p>
+                      Com essas configurações, sua aplicação poderá utilizar cookies em requisições CORS, garantindo sessões seguras e facilitando a comunicação entre frontend e backend.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+          `;
+        } else if (postId === "10") {
+          postContent = `
+            <main class="container">
+              <div class="post-detalhes">
+                <p class="product-path">
+                  <i class="fas fa-chevron-right"></i>
+                  <a href="../index.html">Home</a> /
+                  <a href="#">Dicas</a> /
+                  <a href="#">Frontend</a> /
+                  Como fazer o deploy de sua aplicação Angular utilizando cPanel de modo rápido e fácil
+                </p>
+                <hr>
+
+                <h1>Como fazer o deploy de sua aplicação Angular utilizando cPanel de modo rápido e fácil</h1>
+
+                <div class="meu-perfil">
+                  <a href="#">
+                    <div class="meu-perfil">
+                      <img src="../images_home/profile.jpg" alt="Foto de perfil" />
+                      <div class="perfil-info">
+                        <h1>Jeferson Primer</h1>
+                        <p>Engenheiro de Software</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <hr>
+
+                <p><strong>Data:</strong> 16 de dezembro de 2024</p>
+
+                <div class="container content">
+                  <article>
+                    <h2>Introdução</h2>
+                    <p>
+                      Deploy de aplicações Angular utilizando o <strong>cPanel</strong> pode parecer complicado devido ao gerenciamento de rotas no servidor. Neste guia, vou mostrar como configurar corretamente sua aplicação Angular e resolver os problemas comuns de roteamento no cPanel.
+                    </p>
+
+                    <h2>Sobre o Angular</h2>
+                    <p>
+                      Angular é um framework utilizado para criar SPA’s (<em>Single Page Applications</em>), aplicações que funcionam em uma única página e utilizam uma engine para dinamizar a interface.
+                    </p>
+                    <p>
+                      Ao gerar uma aplicação em modo de produção, o Angular cria a pasta <code>dist/nomeDoSeuProjeto</code> com o arquivo principal <code>index.html</code>. Este arquivo contém os scripts e estilizações que permitem a navegação entre as rotas sem recarregar a página.
+                    </p>
+
+                    <h2>O problema do roteamento</h2>
+                    <p>
+                      No cPanel, o servidor trata cada pasta no gerenciador de arquivos como uma rota específica. Por exemplo:
+                    </p>
+                    <pre><code>meusite.com/contato</code></pre>
+                    <p>
+                      O servidor tentará encontrar uma pasta <code>/contato</code>, mas, em uma aplicação Angular, as rotas são dinâmicas e gerenciadas pelo framework. Como resultado, o servidor devolve um erro <strong>404 Not Found</strong>.
+                    </p>
+
+                    <h2>Solução</h2>
+                    <h3>1. Configurando o roteamento no Angular</h3>
+                    <p>Adicione as seguintes importações no arquivo <code>app.module.ts</code>:</p>
+                    <pre><code>
+            import { 
+              CommonModule, 
+              HashLocationStrategy, 
+              LocationStrategy 
+            } from '@angular/common';
+                    </code></pre>
+
+                    <p>Adicione as configurações nos <code>providers</code>:</p>
+                    <pre><code>
+            @NgModule({
+              imports: [CommonModule],
+              providers: [
+                { provide: LocationStrategy, useClass: HashLocationStrategy },
+              ],
+            })
+            export class AppModule {}
+                    </code></pre>
+                    <p>
+                      Isso garante que as requisições de rota passarão pelo Angular e o componente correto será renderizado sem interferência do servidor.
+                    </p>
+
+                    <h3>2. Gerando os arquivos de produção</h3>
+                    <p>
+                      Execute o seguinte comando na raiz do projeto Angular:
+                    </p>
+                    <pre><code>ng build --aot</code></pre>
+                    <p>
+                      Isso criará a pasta <code>dist</code> contendo os arquivos prontos para o deploy. Compacte o conteúdo da pasta em um arquivo <strong>.zip</strong>.
+                    </p>
+
+                    <h3>3. Fazendo o upload no cPanel</h3>
+                    <ol>
+                      <li>Acesse o <strong>Gerenciador de Arquivos</strong> no cPanel.</li>
+                      <li>Faça o upload do arquivo <code>nomeDoSeuProjeto.zip</code> na raiz do seu site.</li>
+                      <li>Extraia o conteúdo do arquivo .zip clicando com o botão direito e selecionando <em>Extrair</em>.</li>
+                      <li>Mova os arquivos extraídos para a raiz da aplicação, mantendo a estrutura de diretórios.</li>
+                    </ol>
+
+                    <h2>Resultado Final</h2>
+                    <p>
+                      A raiz do projeto deve conter os arquivos principais do Angular, como <code>index.html</code>, <code>main.js</code>, <code>styles.css</code>, entre outros. Sua aplicação Angular estará pronta para funcionar corretamente com todas as rotas disponíveis!
+                    </p>
+
+                    <h2>Conclusão</h2>
+                    <p>
+                      Com essa configuração, você consegue realizar o deploy de uma aplicação Angular no cPanel de forma rápida e sem problemas de roteamento. Espero que este guia tenha ajudado! 😊
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </main>
+
+          `;
+        }else {
           postContent = `
             <div class="post-detalhes">
               <h1>Post Não Encontrado</h1>
