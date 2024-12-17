@@ -181,6 +181,7 @@ main {
   justify-content: center;
   gap: 10px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .filtro span {
@@ -208,13 +209,13 @@ a {
   margin-bottom: 50px;
 }
 
-.card:hover {
+/* .card:hover {
   border: 1px solid #1212;
-  background-color: #f0f0f0;
+  background-color: #FAF8F5;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: scale(1.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+} */
 /*111111111111111111111111111111111111*/
 /* colocar no mobile a parte de baixo*/
 .card .post-header {
@@ -238,7 +239,7 @@ a {
   justify-content: flex-start; /* Alinha o texto ao topo */
   position: relative; /* Agora o texto vai ficar ao lado da imagem */
   padding: 10px; /* Espaçamento do texto */
-  background-color: rgba(255, 255, 255, 0.7); /* Fundo semitransparente, para não esconder a imagem */
+  background-color: #FAF8F5;
   border-radius: 8px; /* Bordas arredondadas, caso desejado */
 }
 
@@ -246,10 +247,6 @@ a {
   margin-bottom: 10px;
   font-size: 18px; /* Ajuste o tamanho do título conforme necessário */
 }
-
-
-
-
 /* colocar no mobile a parte de cima*/
 
 .post {
@@ -295,12 +292,12 @@ a {
   align-items: center; 
   gap: 10px; 
   position: relative;
-  top: -10px; /* Ajuste para telas grandes */
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
   .meu-perfil {
-    top: -10px; /* Ajuste para telas menores */
+    top: 10px; /* Ajuste para telas menores */
   }
 }
 

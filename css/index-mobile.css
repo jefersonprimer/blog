@@ -122,7 +122,6 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    border-bottom: 1px solid gray;
     gap: 5px;
   }
   
@@ -136,7 +135,6 @@
     max-width: 400px; 
     margin: 50px auto; 
     border: none;
-    border-bottom: 1px solid #D1D1D1;
     background-color: #FAF8F5;
   }
 
@@ -197,6 +195,40 @@
     background-color: #1212;
     color: black;
   }
+
+  /* perfil styles container*/
+.meu-perfil {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 10px; 
+  position: relative;
+  margin-top: 10px;
+}
+
+.meu-perfil img {
+  max-width: 45px; 
+  border-radius: 50%; 
+  margin-bottom: 15px;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.perfil-info h1 {
+  font-size: 15px!important; 
+  margin: 0
+}
+
+.perfil-info p {
+  margin-top: 2px;
+  font-size: 14px; 
+  color: #777; 
+}
+
 
 }
 
