@@ -1381,11 +1381,30 @@
           `;
         }else {
           postContent = `
-            <div class="post-detalhes">
-              <h1>Post Não Encontrado</h1>
-              <p>Desculpe, mas não encontramos o post solicitado.</p>
-              <p>Tem apenas 10 posts no blog, entao tente na url o id=1 a id=10</p>
-            </div>
+            <main class="container">
+              <div class="error-page">
+                  <h1 class="error-title">Erro 404 - Página Não Encontrada</h1>
+                  <p class="error-message">Desculpe, a página que você está procurando não foi encontrada.</p>
+                  <p class="suggestion">
+                      Temos apenas 10 posts no blog, então tente acessar um dos seguintes links:
+                      <ul>
+                          <li><a href="post-details.html?id=1">Primeiros Passos no Spring Boot</a></li>
+                          <li><a href="post-details.html?id=2">Guia Iniciante sobre o Single Thread e Event Loop em JavaScript</a></li>
+                          <li><a href="post-details.html?id=3">3 Formas de Aumentar a Segurança na Nuvem</a></li>
+                          <li><a href="post-details.html?id=4">Como o React JS funciona?</a></li>
+                          <li><a href="post-details.html?id=5">Escrevendo seu primeiro teste para sua aplicação Create-React-App utilizando Jest e Testing Library</a></li>
+                          <li><a href="post-details.html?id=6">3 Dicas para Devs melhorarem a implementação com HTML e CSS das interfaces criadas em ferramentas como o Figma</a></li>
+                          <li><a href="post-details.html?id=7">Dark Mode em React — Utilizando Contextos</a></li>
+                          <li><a href="post-details.html?id=8">Windowing — Otimizando sua aplicação React</a></li>
+                          <li><a href="post-details.html?id=9">Como configurar cookies em requisições CORS com Express e Axios</a></li>
+                          <li><a href="post-details.html?id=10">Como fazer o deploy de sua aplicação angular utilizando cPanel de modo rápido e fácil</a></li>
+                      </ul>
+                  </p>
+                  <p class="home-link">
+                      <a href="../index.html">Voltar para a página inicial</a>
+                  </p>
+              </div>
+          </main>
           `;
         }
 

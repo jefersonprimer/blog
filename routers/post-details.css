@@ -263,3 +263,67 @@ footer a:hover {
 footer i {
   font-size: 35px;
 }
+
+
+/* Especificando para a página de erro */
+.container .error-page {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do título de erro */
+.container .error-page .error-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Mensagem de erro */
+.container .error-page .error-message {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Sugestões de links */
+.container .error-page .suggestion {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container .error-page .suggestion ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.container .error-page .suggestion ul li {
+  margin: 5px 0;
+}
+
+.container .error-page .suggestion ul li a {
+  color: #007BFF;
+  transition: color 0.3s;
+}
+
+.container .error-page .suggestion ul li a:hover {
+  color: #0056b3;
+  text-decoration: underline; /* Adiciona a linha embaixo no hover */
+}
+
+/* Link para voltar à home */
+.container .error-page .home-link a {
+  font-size: 16px;
+  color: blue;
+  text-decoration: underline;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.container .error-page .home-link a:hover {
+  color: blue;
+  text-decoration: underline;
+}
