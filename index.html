@@ -3,18 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog</title>
+    <title>Blog | Blog Jeferson Primer | Dev</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Meu Blog Pessoal</h1>
-        <p>Um blog simples feito com HTML, CSS e JavaScript.</p>
+        <div id="header-container">
+            <img src="./image/logo.png" alt="Primerdev logo" id="logo">
+            <div class="rigth-section">
+                <div class="input-div" id="search-trigger">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        data-slot="icon"
+                        id="icon-search"
+                    >
+                        <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"></path>
+                    </svg>
+                    <div class="search-placeholder">Pesquisar um post
+                        <span id="key-map">Ctrl + k</span>
+                    </div>
+                </div>
+                <div id="container-link">
+                    <a href="#" class="link">Descontos</a>
+                    <a href="#" class="link">Videos</a>
+                    <a href="#" class="link">Parcerias</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main id="posts-container">
-        <!-- Os posts em Markdown serão carregados aqui -->
+    <main>
+        <div> 
+            <h1 id="title">Blog Jeferson Primer | Dev</h1>
+            <p class="paragraph">    
+                Aprenda sobre desenvolvimento web, cloud computing, programação, tecnologia e carreira. Aqui falamos de Java, Angular, AWS e muito mais.
+            </p>
+            <p class="paragraph">
+                Conteúdo prático para quem quer se atualizar, crescer na carreira e dominar as ferramentas mais usadas no mercado.
+            </p>
+        </div>
+
+        <section id="posts-container">
+            <!-- Os posts em Markdown serão carregados aqui -->
+        </section>
     </main>
+
+    <!-- Modal de Pesquisa -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <h2>Pesquisar Posts</h2>
+                <button id="close-search-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="search-input-container">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="search-icon"
+                >
+                    <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"></path>
+                </svg>
+                <input type="text" id="search-input" placeholder="Digite para pesquisar..." autocomplete="off">
+            </div>
+            <div id="search-hint" class="search-hint">Digite pelo menos 3 caracteres para começar a busca</div>
+            
+            <div id="search-results" class="search-results">
+                <!-- Os resultados da pesquisa aparecerão aqui -->
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 - Feito com ❤️</p>

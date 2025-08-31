@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "primeiro-post",
+      "fileName": "primeiro-post.md",
+      "title": "Bem-vindo ao Meu Novo Blog!",
+      "excerpt": "Este é o primeiro post do meu blog pessoal sobre desenvolvimento web e tecnologia. Aqui você encontrará conteúdo prático sobre programação, frameworks modernos e dicas para crescer na carreira de desenvolvedor.",
+      "date": "15 de janeiro de 2025",
+      "tags": ["Desenvolvimento", "Tecnologia", "Blog"],
+      "author": {
+        "name": "Jeferson Primer",
+        "profession": "Autor",
+        "image": "./image/about-me.png"
+      },
+      "coverImage": "./image/react-js-cover-img.webp",
+      "featured": true
+    },
+    {
+      "id": "segundo-post",
+      "fileName": "segundo-post.md",
+      "title": "Usando Markdown para Criar Conteúdo",
+      "excerpt": "Markdown é uma sintaxe incrivelmente simples e poderosa para formatar texto. Desenvolvida por John Gruber em 2004, ela se tornou o padrão para documentação técnica, blogs e plataformas como GitHub.",
+      "date": "14 de janeiro de 2025",
+      "tags": ["Markdown", "Tecnologia", "Documentação"],
+      "author": {
+        "name": "Jeferson Primer",
+        "profession": "Autor",
+        "image": "./image/about-me.png"
+      },
+      "coverImage": "./image/js.webp",
+      "featured": false
+    }
+  ]
+}
