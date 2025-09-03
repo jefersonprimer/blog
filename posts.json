@@ -10,7 +10,7 @@
       "author": {
         "name": "Jeferson Primer",
         "profession": "Autor",
-        "image": "./image/about-me.png"
+        "image": "./image/i.jpg"
       },
       "coverImage": "./image/react-js-cover-img.webp",
       "featured": true
@@ -25,7 +25,7 @@
       "author": {
         "name": "Jeferson Primer",
         "profession": "Autor",
-        "image": "./image/about-me.png"
+        "image": "./image/i.jpg"
       },
       "coverImage": "./image/js.webp",
       "featured": false

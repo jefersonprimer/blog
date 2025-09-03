@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Blog Jeferson Primer | Dev</title>
+    <title>Posts por Tag</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
+     <header>
         <div id="header-container">
             <a href="./index.html">
                 <img src="./image/logo.png" alt="Primerdev logo" id="logo">
@@ -60,29 +60,15 @@
             </nav>
         </div>
     </header>
-
     <main>
-        <div> 
-            <h1 id="title">Blog Jeferson Primer | Dev</h1>
-            <p class="paragraph">    
-                Aprenda sobre desenvolvimento web, cloud computing, programação, tecnologia e carreira. Aqui falamos de Java, Angular, AWS e muito mais.
-            </p>
-            <p class="paragraph">
-                Conteúdo prático para quem quer se atualizar, crescer na carreira e dominar as ferramentas mais usadas no mercado.
-            </p>
-            
-        </div>
-        
-        <section id="posts-container">
-            <!-- Os posts em Markdown serão carregados aqui -->
-        </section>
+        <h1 id="tag-name"></h1>
+        <div id="tag-posts-container"></div>
         <div id="load-more-container">
-            <button id="load-more-button">Carregar mais posts</button>
+            <button id="load-more-button">Carregar Mais</button>
         </div>
     </main>
-
     <!-- Modal de Pesquisa -->
-    <div id="search-modal" class="search-modal">
+     <div id="search-modal" class="search-modal">
         <div class="search-modal-content">
             <div class="search-modal-header">
                 <h2>Pesquisar Posts</h2>
@@ -107,9 +93,7 @@
         </div>
     </div>
 
-    <!-- Biblioteca para converter Markdown para HTML -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
+    <script src="tag.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
